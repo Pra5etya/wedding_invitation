@@ -1,0 +1,6 @@
+# Environment
+my_env
+
+# Source Code
+app/__pycache__
+app/routes/__pycache__

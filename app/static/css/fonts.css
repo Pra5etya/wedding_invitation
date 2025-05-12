@@ -1,0 +1,21 @@
+/* libre baskervile */
+@font-face {
+    font-family: 'font_libre_regular';
+    src: url('../fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype');
+}
+
+/* playfair display */
+@font-face {
+    font-family: 'font_playfair_regular';
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Text Nama Lengkap CP */
+.font_libre {
+    font-family: 'font_libre_regular', Helvetica, Arial, sans-serif;
+}
+
+/* Text Dekstipsi */
+.font_playfair {
+    font-family: 'font_playfair_regular', Arial, Helvetica, sans-serif;
+}

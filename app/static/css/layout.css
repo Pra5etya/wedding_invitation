@@ -1,0 +1,48 @@
+/* Media layout */
+/* ============ */
+
+/* Layout Device ≥ 768px (Tablet, etc) */
+@media (min-width: 768px) {
+    .responsive-img {
+        max-width: 600px;
+        border: 8px solid #666;
+        border-radius: 20px;
+    }
+}
+
+/* Layout Device ≥ 1024px (laptop, etc) */
+@media (min-width: 1024px) {
+    .responsive-img {
+        max-width: 800px;
+        border: 10px solid #333;
+        border-radius: 30px;
+    }
+}
+
+
+/* Class layout */
+/* ============ */
+
+/*  */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/*  */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Default frame (untuk layar kecil seperti HP) */
+.responsive-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+}
