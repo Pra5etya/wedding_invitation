@@ -3,20 +3,12 @@
 
 /* Layout Device ≥ 768px (Tablet, etc) */
 @media (min-width: 768px) {
-    .responsive-img {
-        max-width: 600px;
-        border: 8px solid #666;
-        border-radius: 20px;
-    }
+
 }
 
 /* Layout Device ≥ 1024px (laptop, etc) */
 @media (min-width: 1024px) {
-    .responsive-img {
-        max-width: 800px;
-        border: 10px solid #333;
-        border-radius: 30px;
-    }
+    
 }
 
 
@@ -37,12 +29,21 @@
     align-items: center;
 }
 
-
-/* Default frame (untuk layar kecil seperti HP) */
 .responsive-img {
     width: 100%;
     max-width: 100%;
     height: auto;
     border: 5px solid #ccc;
     border-radius: 10px;
+}
+
+.base_bg {
+    background-image: url('../assets/png/bg_vintage_4k.png');
+    background-size: cover;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    height: 100%;
 }
