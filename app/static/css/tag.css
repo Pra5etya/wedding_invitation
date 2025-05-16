@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
 }
 
@@ -15,27 +16,9 @@ audio {
 
 /* Body Tag */
 /* ======== */
-
 body {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #fff;
-}
+  margin: 0;
+  padding: 0;
 
-
-/* Button Tag */
-/* ========== */
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
+  overflow: hidden;
 }

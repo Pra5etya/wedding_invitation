@@ -15,28 +15,13 @@
 /* Class layout */
 /* ============ */
 
-/*  */
-.container {
-    max-width: 1200px;
+/* Container */
+.con_1 {
+    width: fit-content;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
-/*  */
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.responsive-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border: 5px solid #ccc;
-    border-radius: 10px;
-}
-
+/* background */
 .base_bg {
     background-image: url('../assets/png/bg_vintage_4k.png');
     background-size: cover;

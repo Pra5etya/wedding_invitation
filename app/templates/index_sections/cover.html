@@ -1,10 +1,17 @@
 <section class="cover">
-    <img src = "{{ url_for('static', filename = 'assets/png/initial_name.png') }}" 
-    class = "img_init_name"
-    alt = "Initital name">
-    
-    <h1>The Wedding of</h1>
-    <h2>Raka & Nurul</h2>
-    <p>19 Juni 2025</p>
-    
+    <img src="{{ url_for('static', filename='assets/png/initial_name.png') }}" 
+         class="init_name"
+         alt="Initial name">
+
+    <div id="overlay">
+        <button id="enableScrollBtn">Mulai Scroll</button>
+    </div>
+
+    <img src="{{ url_for('static', filename='assets/png/gunungan_ramayana.png') }}"
+         class="gunungan_ramayana" 
+         alt="Wayang Gunungan">
+
+    <div class="con_1"> 
+        <h1 class="font_libre">Raka & Nurul</h1>
+    </div>
 </section>
