@@ -1,6 +1,21 @@
 /* Media layout */
 /* ============ */
 
+/* Layout Device < 768px (Tablet, etc) */
+@media (max-width: 768px) {
+    .grid_left {
+        grid-column: span 2
+    }
+
+    .grid_right {
+        grid-column: span 2
+    }
+
+    .grid_center {
+        grid-column: span 8
+    }
+}
+
 /* Layout Device ≥ 768px (Tablet, etc) */
 @media (min-width: 768px) {
 
@@ -12,18 +27,10 @@
 }
 
 
-/* Class layout */
+/* Base layout */
 /* ============ */
-
-/* Container */
-.con_1 {
-    width: fit-content;
-    margin: 0 auto;
-}
-
-/* background */
 .base_bg {
-    background-image: url('../assets/png/bg_vintage_4k.png');
+    background-image: url('../assets/bg_vintage.png');
     background-size: cover;
 
     background-position: center;
@@ -31,4 +38,79 @@
     background-attachment: fixed;
 
     height: 100%;
+}
+
+.center_items {
+    display: grid;
+    height: 100vh;
+    width: auto;
+    /* place-items: center; */
+}
+
+/* Grid Layout */
+/* =========== */
+.grid_container {
+  display: grid;
+  
+  grid-template-columns: repeat(12, 1fr); /* 12 kolom sama besar */
+  grid-template-rows: auto;
+  
+  gap: 0.5rem;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.grid_container_auto {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  
+  gap: 0.5rem;
+  position: relative;
+  padding: 0.5rem;
+  height: 100vh
+}
+
+/* Grid Sections */
+/* ============= */
+.grid_top {
+    grid-column: span 4;
+}
+
+.grid_right {
+    grid-column: span 4;
+}
+
+.grid_center {
+    grid-column: span 4;
+}
+
+.grid_bottom {
+    grid-column: span 4;
+}
+
+.grid_left {
+    grid-column: span 4;
+}
+
+
+
+
+/* Corner Sections */
+/* ============= */
+.cor_top_left {
+    grid-column: span 4;
+}
+
+.cor_top_right {
+    grid-column: span 4;
+}
+
+.cor_bottom_left {
+    grid-column: span 4;
+}
+
+.cor_bottom_right {
+    grid-column: span 4;
 }

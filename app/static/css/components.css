@@ -1,91 +1,13 @@
-/* Card Sections */
-/* ============= */
-
-.card {
-    background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 1rem 0;
-}
-
-
 /* Button Sections */
 /* =============== */
 
-another_sample{
-    /* Overlay fullscreen */
-    #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    pointer-events: auto;
-    }
-
-    /* Saat overlay akan hilang */
-    #overlay.fade-out {
-    opacity: 0;
-    pointer-events: none;
-    }
-
-    /* Tombol scroll */
-    #enableScrollBtn {
-    padding: 1em 2em;
-    font-size: 1.2em;
-    background: #00b894;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    #enableScrollBtn:hover {
-    background-color: #019875;
-    transform: scale(1.05);
-    }
-}
-
-/* Style tombol yang sudah ada */
-#overlay {
-  /* Posisi relatif saja, tidak fullscreen */
-  padding: 20px;
-  text-align: center;
-}
-
-#enableScrollBtn {
-  padding: 1em 2em;
-  font-size: 1.2em;
-  background: #00b894;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#enableScrollBtn:hover {
-  background-color: #019875;
-  transform: scale(1.05);
-}
 
 
 /* Image Sections */
 /* ============== */
 
-.init_name {
-    width: 75%;
+.inisial {
+    width: 50%;
     height: auto;
     display: block;
 
@@ -94,7 +16,7 @@ another_sample{
 }
 
 .gunungan_ramayana {
-    width: 75%;
+    width: 50%;
     height: 50%;
     display: block;
 

@@ -1,17 +1,56 @@
-<section class="cover">
-    <img src="{{ url_for('static', filename='assets/png/initial_name.png') }}" 
-         class="init_name"
-         alt="Initial name">
+<section>
 
-    <div id="overlay">
-        <button id="enableScrollBtn">Mulai Scroll</button>
+    <!-- Top Sections -->
+    <div class = "grid_container" style = "background-color: aquamarine;">
+        <div class = "cor_top_left ">
+            <p>frame corner top-left</p>
+        </div> 
+        
+        <div class = "grid_top">
+            <p>frame top</p>
+        </div>
+        
+        <div class = "cor_top_right">
+            <p>frame corner top-right</p>
+        </div>
     </div>
 
-    <img src="{{ url_for('static', filename='assets/png/gunungan_ramayana.png') }}"
-         class="gunungan_ramayana" 
-         alt="Wayang Gunungan">
+    <!-- Center Sections -->
+    <!-- =============== -->
+    <div class = "grid_container" style = "background-color: blueviolet;">
+        <div class = "grid_left center_items" style = "background-color: yellow;">
+            <p>frame left</p>
+            <img src = "{{ url_for('static', filename = 'assets/frame1_floral_side.png') }}" class = "side_left">
+        </div>
 
-    <div class="con_1"> 
-        <h1 class="font_libre">Raka & Nurul</h1>
+        <div class = "grid_center">
+            <p>frame center</p>
+
+            <img src = "{{ url_for('static', filename='assets/inisial.png') }}" class = "inisial">
+            <img src = "{{ url_for('static', filename='assets/gunungan.png') }}" class = "gunungan_ramayana">
+        </div>
+
+        <div class = "grid_right" style = "background-color: yellow;">
+            <p>frame right</p>
+        </div>
+    </div>
+    
+    <!-- Bottom Sections -->
+    <div class = "grid_container" style = "background-color: red;">
+        <div class = "cor_bottom_left">
+            <p>frame corner bottom-left</p>
+        </div> 
+        
+        <div class = "grid_bottom">
+            <p>frame bottom</p>
+        </div>
+        
+        <div class = "cor_bottom_right">
+            <p>frame corner bottom-right</p>
+        </div>
+    </div>
+
+    <div class = "container_1"> 
+        <h1 class = "font_libre">Raka & Nurul</h1>
     </div>
 </section>
