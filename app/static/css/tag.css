@@ -1,8 +1,8 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
@@ -10,16 +10,24 @@
 /* ========= */
 
 audio {
-    display: none;
+  display: none;
 }
 
 
 /* Body Tag */
 /* ======== */
 body {
-  margin: 0;
-  padding: 0;
+margin: 0;
+padding: 0;
 
-  /* lock scroll -> hidden */
-  overflow: scroll;
+/* lock scroll -> hidden */
+overflow: scroll;
+}
+
+
+/* Image Tag */
+/* ========= */
+img {
+  display: inline-block;
+  position: relative;
 }

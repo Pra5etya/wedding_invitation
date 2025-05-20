@@ -1,6 +1,17 @@
+/* Tag HTML */
 @import url(tag.css);
+
+/* Grid, Klex, Etc */
 @import url(layout.css);
+
+/* Item Class */
 @import url(components.css);
+
+/* Fonts */
 @import url(fonts.css);
+
+/* Margin & Padding */
 @import url(utilities.css);
-@import url(frame.css);
+
+/* Media Querry */
+@import url(media.css);

@@ -1,0 +1,72 @@
+.sample_left, .sample_right {
+    display: grid;
+    grid-column: span 4;
+
+    position: relative;     /* agar child dengan position absolute bisa bekerja */
+
+    width: auto;            /* sesuaikan dengan kebutuhan */
+    height: auto;           /* tinggi area yang ingin diisi gambar */
+
+    justify-items: center;  /* align secara horizontal */
+    align-items: center;    /* align secara vertikal jika tidak pakai absolute */
+}
+
+.sample_left img, .sample_right img {
+    width: 1.5rem;            /* gambar isi penuh lebar container */
+    height: auto;           /* agar rasio tetap terjaga */
+    
+    display: block;
+
+    object-fit: contain; /* bisa juga cover, tergantung kebutuhan */
+}
+
+
+
+
+
+.sample_top_left, .sample_top_right, .sample_bottom_left, .sample_bottom_right {
+    display: grid;
+    grid-auto-flow: column; /* Menyusun ke samping */
+
+    grid-row: span 4;
+
+    position: relative;     /* agar child dengan position absolute bisa bekerja */
+
+    width: auto;            /* sesuaikan dengan kebutuhan */
+    height: auto;           /* tinggi area yang ingin diisi gambar */
+
+    justify-items: center;  /* align secara horizontal */
+    align-items: center;    /* align secara vertikal jika tidak pakai absolute */
+}
+
+.sample_top_left img, .sample_top_right img, .sample_bottom_left img, .sammple_bottom_right img {
+    width: 3.5rem;          /* gambar isi penuh lebar container */
+    height: auto;           /* agar rasio tetap terjaga */
+    
+    display: block;
+
+    object-fit: contain;    /* bisa juga cover, tergantung kebutuhan */
+}
+
+
+
+
+
+
+
+.grid_top img, .grid_bottom img {
+    width: auto;            /* gambar isi penuh lebar container */
+    height: 1.3rem;           /* agar rasio tetap terjaga */
+    
+    display: block;
+
+    object-fit: contain; /* bisa juga cover, tergantung kebutuhan */
+}
+
+
+
+section {
+  display: grid;
+  height: 100vh; /* penuh tinggi viewport */
+  grid-template-rows: 10% 80% 10%; /* bagi 3 baris dengan tinggi persentase */
+}

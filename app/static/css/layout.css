@@ -1,32 +1,3 @@
-/* Media layout */
-/* ============ */
-
-/* Layout Device < 768px (Tablet, etc) */
-@media (max-width: 768px) {
-    .grid_left {
-        grid-column: span 2
-    }
-
-    .grid_right {
-        grid-column: span 2
-    }
-
-    .grid_center {
-        grid-column: span 8
-    }
-}
-
-/* Layout Device ≥ 768px (Tablet, etc) */
-@media (min-width: 768px) {
-
-}
-
-/* Layout Device ≥ 1024px (laptop, etc) */
-@media (min-width: 1024px) {
-    
-}
-
-
 /* Base layout */
 /* ============ */
 .base_bg {
@@ -35,82 +6,202 @@
 
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: local;
 
     height: 100%;
 }
 
 .center_items {
-    display: grid;
     height: 100vh;
     width: auto;
     /* place-items: center; */
 }
 
-/* Grid Layout */
-/* =========== */
-.grid_container {
-  display: grid;
-  
-  grid-template-columns: repeat(12, 1fr); /* 12 kolom sama besar */
-  grid-template-rows: auto;
-  
-  gap: 0.5rem;
-  position: relative;
-  padding: 0.5rem;
-}
-
-.grid_container_auto {
-  display: grid;
-  
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: auto;
-  
-  gap: 0.5rem;
-  position: relative;
-  padding: 0.5rem;
-  height: 100vh
-}
-
 /* Grid Sections */
 /* ============= */
-.grid_top {
+.grid_horizontal {
+    display: grid;
+    
+    grid-auto-flow: column;
+    grid-template-columns: repeat(12, 1fr);
+    
+    gap: 0;
+
+    height: 100%;
+}
+
+.grid_vertical {
+    display: grid;
+    
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    
+    position: relative;
+    
+    gap: 0;
+
+    height: 100%;
+}
+
+
+/* Grid Position */
+/* ============= */
+.grid_left {
+    /* display: grid; */
     grid-column: span 4;
+    
+    margin-left: 0.2rem;
+
+    position: relative;             /* agar child dengan position absolute bisa bekerja */
+
+    width: 3rem;                    /* sesuaikan dengan kebutuhan */
+    height: auto;                   /* tinggi area yang ingin diisi gambar */
+
+    justify-items: left;            /* align secara horizontal */
+    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
+
+    background-image: url('../assets/side/frame1_vertikal.png');
+
+    background-repeat: repeat-y;    /* mengulang secara vertikal */
+    background-size: contain;       /* menyesuaikan lebar gambar */
 }
 
 .grid_right {
+    /* display: grid; */
     grid-column: span 4;
+
+    margin-right: 0.2rem;
+
+    position: relative;             /* agar child dengan position absolute bisa bekerja */
+
+    width: 3rem;                    /* sesuaikan dengan kebutuhan */
+    height: auto;                   /* tinggi area yang ingin diisi gambar */
+
+    justify-items: right;            /* align secara horizontal */
+    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
+
+    background-image: url('../assets/side/frame1_vertikal_reverse.png');
+
+    background-repeat: repeat-y;    /* mengulang secara vertikal */
+    background-size: contain;       /* menyesuaikan lebar gambar */
 }
 
-.grid_center {
+.grid_top {
+    /* display: grid; */
     grid-column: span 4;
+
+    position: relative;             /* agar child dengan position absolute bisa bekerja */
+
+    width: auto;                    /* sesuaikan dengan kebutuhan */
+    height: 2.6rem;                   /* tinggi area yang ingin diisi gambar */
+
+    justify-items: center;            /* align secara horizontal */
+    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
+
+    background-image: url('../assets/side/frame1_horizontal.png');
+
+    background-repeat: repeat-x;    /* mengulang secara vertikal */
+    
+    background-size: contain;       /* menyesuaikan lebar gambar */
+    background-position: top left;    
 }
 
 .grid_bottom {
+    /* display: grid; */
     grid-column: span 4;
-}
 
-.grid_left {
-    grid-column: span 4;
-}
+    position: relative;             /* agar child dengan position absolute bisa bekerja */
 
+    width: auto;                    /* sesuaikan dengan kebutuhan */
+    height: 2.6rem;                   /* tinggi area yang ingin diisi gambar */
+
+    justify-items: center;            /* align secara horizontal */
+    align-self: flex-end;        /* align secara vertikal jika tidak pakai absolute */
+
+    background-image: url('../assets/side/frame1_horizontal_reverse.png');
+
+    background-repeat: repeat-x;    /* mengulang secara vertikal */
+    
+    background-size: contain;       /* menyesuaikan lebar gambar */
+    background-position: bottom left;    
+}
 
 
 
 /* Corner Sections */
 /* ============= */
 .cor_top_left {
+    display: grid;
     grid-column: span 4;
+
+    position: relative;             /* agar child dengan position absolute bisa bekerja */
+
+    width: 6.3rem; 
+    height: 6.3rem; 
+
+    justify-items: left;            /* align secara horizontal */
+    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
+
+    background-image: url('../assets/corner/frame1_horizontal.png');
+
+    background-size: cover;       /* menyesuaikan lebar gambar */
+    background-position: top left;
+    background-repeat: no-repeat;
 }
 
 .cor_top_right {
+    display: grid;
     grid-column: span 4;
+
+    position: relative;             /* agar child dengan position absolute bisa bekerja */
+
+    width: 6.3rem; 
+    height: 6.3rem; 
+
+    justify-items: right;            /* align secara horizontal */
+    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
+
+    background-image: url('../assets/corner/frame1_horizontal_reverse.png');
+
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
 }
 
 .cor_bottom_left {
+    display: grid;
     grid-column: span 4;
+
+    position: relative;             /* agar child dengan position absolute bisa bekerja */
+
+    width: 6.3rem; 
+    height: 6.3rem; 
+
+    justify-items: left;            /* align secara horizontal */
+    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
+
+    background-image: url('../assets/corner/frame1_vertical.png');
+
+    background-size: cover;       /* menyesuaikan lebar gambar */
+    background-position: bottom left;
+    background-repeat: no-repeat;
 }
 
 .cor_bottom_right {
+    display: grid;
     grid-column: span 4;
+
+    position: relative;             /* agar child dengan position absolute bisa bekerja */
+
+    width: 6.3rem; 
+    height: 6.3rem; 
+
+    justify-items: left;            /* align secara horizontal */
+    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
+
+    background-image: url('../assets/corner/frame1_vertical_reverse.png');
+
+    background-size: cover;       /* menyesuaikan lebar gambar */
+    background-position: bottom right;
+    background-repeat: no-repeat;
 }

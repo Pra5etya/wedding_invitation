@@ -1,56 +1,38 @@
 <section>
 
     <!-- Top Sections -->
-    <div class = "grid_container" style = "background-color: aquamarine;">
-        <div class = "cor_top_left ">
-            <p>frame corner top-left</p>
-        </div> 
-        
-        <div class = "grid_top">
-            <p>frame top</p>
-        </div>
-        
-        <div class = "cor_top_right">
-            <p>frame corner top-right</p>
-        </div>
+    <!-- ============ -->
+    <div class = "grid_horizontal">
+    
+        <div class = "cor_top_left"></div>
+        <div class = "grid_top"></div>
+        <div class = "cor_top_right"></div>
+
     </div>
 
     <!-- Center Sections -->
     <!-- =============== -->
-    <div class = "grid_container" style = "background-color: blueviolet;">
-        <div class = "grid_left center_items" style = "background-color: yellow;">
-            <p>frame left</p>
-            <img src = "{{ url_for('static', filename = 'assets/frame1_floral_side.png') }}" class = "side_left">
-        </div>
+    <div class = "grid_vertical">
+
+        <div class = "grid_left"></div>
 
         <div class = "grid_center">
-            <p>frame center</p>
-
             <img src = "{{ url_for('static', filename='assets/inisial.png') }}" class = "inisial">
             <img src = "{{ url_for('static', filename='assets/gunungan.png') }}" class = "gunungan_ramayana">
         </div>
 
-        <div class = "grid_right" style = "background-color: yellow;">
-            <p>frame right</p>
-        </div>
+        <div class = "grid_right"></div>
+        
     </div>
     
     <!-- Bottom Sections -->
-    <div class = "grid_container" style = "background-color: red;">
-        <div class = "cor_bottom_left">
-            <p>frame corner bottom-left</p>
-        </div> 
-        
-        <div class = "grid_bottom">
-            <p>frame bottom</p>
-        </div>
-        
-        <div class = "cor_bottom_right">
-            <p>frame corner bottom-right</p>
-        </div>
+    <!-- =============== -->
+    <div class = "grid_horizontal">
+    
+        <div class = "cor_bottom_left"></div>
+        <div class = "grid_bottom"></div>
+        <div class = "cor_bottom_right"></div>
+
     </div>
 
-    <div class = "container_1"> 
-        <h1 class = "font_libre">Raka & Nurul</h1>
-    </div>
 </section>
