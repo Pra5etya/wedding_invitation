@@ -1,38 +1,34 @@
-<section>
-
-    <!-- Top Sections -->
-    <!-- ============ -->
-    <div class = "grid_horizontal">
-    
-        <div class = "cor_top_left"></div>
-        <div class = "grid_top"></div>
-        <div class = "cor_top_right"></div>
-
+<div class = "cover">
+    <!-- Top Section -->
+    <div class = "sections_cover cover_top">
+        <div class = "cor_frame_tl"></div>
+        <div class = "frame_top"></div>
+        <div class = "cor_frame_tr"></div>
     </div>
 
     <!-- Center Sections -->
-    <!-- =============== -->
-    <div class = "grid_vertical">
+    <div class = "sections_cover cover_center">
+        <div class = "frame_left"></div>
+        
+        <div class = "frame_center">
+                <img src = "{{ url_for('static', filename = 'assets/inisial.png') }}" class = "inisial">
 
-        <div class = "grid_left"></div>
+                <h1 class = "cover_subtitle font_playfair">WEDDING INVITATION</h1>
+                <h2 class = "cover_name font_libre " style = "font-weight: bold;">RAKA<br>&<br>NURUL</h2>
+                <p class = "cover_guest font_playfair">Kepada Yth:<br><strong>Tamu Undangan</strong></p>
 
-        <div class = "grid_center">
-            <img src = "{{ url_for('static', filename='assets/inisial.png') }}" class = "inisial">
-            <img src = "{{ url_for('static', filename='assets/gunungan.png') }}" class = "gunungan_ramayana">
+                <img src = "{{ url_for('static', filename = 'assets/gunungan.png') }}" class = "gunungan">
+
+                <button class = "cover_invitation">✉️ OPEN INVITATION</button>
         </div>
 
-        <div class = "grid_right"></div>
-        
+        <div class = "frame_right"></div>
     </div>
     
     <!-- Bottom Sections -->
-    <!-- =============== -->
-    <div class = "grid_horizontal">
-    
-        <div class = "cor_bottom_left"></div>
-        <div class = "grid_bottom"></div>
-        <div class = "cor_bottom_right"></div>
-
+    <div class = "sections_cover cover_bottom">
+        <div class = "cor_frame_bl"></div>
+        <div class = "frame_bottom"></div>
+        <div class = "cor_frame_br"></div>
     </div>
-
-</section>
+</div>

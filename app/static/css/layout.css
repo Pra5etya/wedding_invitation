@@ -1,210 +1,98 @@
-/* Base layout */
-/* ============ */
-.base_bg {
-    background-image: url('../assets/bg_vintage.png');
-    background-size: cover;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: local;
-
-    height: 100%;
+/* Cover HTML */
+/* ========== */
+.cover {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-
-/* Grid Sections */
-/* ============= */
-.grid_horizontal {
-    display: grid;
-    
-    grid-auto-flow: column;
-    grid-template-columns: repeat(12, 1fr);
-    
-    gap: 0;
-
-    height: 100%;
+.sections_cover {
+    display: flex;
+    width: 100vw;
 }
 
-.grid_vertical {
-    display: grid;
-    
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    
+.cover_top, 
+.cover_bottom {
+    display: flex;
     position: relative;
+    height: 10vh;
     
-    gap: 0;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    height: 100%;
+    /* background-color: brown; */
 }
 
-
-/* Grid Position */
-/* ============= */
-.grid_left {
-    grid-column: span 4;
-    
-    margin-left: 0.2rem;
-
-    position: relative;             /* agar child dengan position absolute bisa bekerja */
-
-    width: 3rem;                    /* sesuaikan dengan kebutuhan */
-    height: auto;                   /* tinggi area yang ingin diisi gambar */
-
-    justify-items: left;            /* align secara horizontal */
-    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
-
-    background-image: url('../assets/side/frame1_vertikal.png');
-
-    background-repeat: repeat-y;    /* mengulang secara vertikal */
-    background-size: contain;       /* menyesuaikan lebar gambar */
-}
-
-.grid_right {
-    grid-column: span 4;
-
-    margin-right: 0.2rem;
-
-    position: relative;             /* agar child dengan position absolute bisa bekerja */
-
-    width: 3rem;                    /* sesuaikan dengan kebutuhan */
-    height: auto;                   /* tinggi area yang ingin diisi gambar */
-
-    justify-items: right;            /* align secara horizontal */
-    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
-
-    background-image: url('../assets/side/frame1_vertikal_reverse.png');
-
-    background-repeat: repeat-y;    /* mengulang secara vertikal */
-    background-size: contain;       /* menyesuaikan lebar gambar */
-}
-
-.grid_center {
-    grid-column: span 4;
-
-    position: relative;             /* agar child dengan position absolute bisa bekerja */
-
-    width: auto;                    /* sesuaikan dengan kebutuhan */
-    height: auto;                   /* tinggi area yang ingin diisi gambar */
-
-    justify-items: center;            /* align secara horizontal */
-    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
-}
-
-.grid_top {
-    grid-column: span 4;
-
-    position: relative;             /* agar child dengan position absolute bisa bekerja */
-
-    width: auto;                    /* sesuaikan dengan kebutuhan */
-    height: 2.6rem;                   /* tinggi area yang ingin diisi gambar */
-
-    justify-items: center;            /* align secara horizontal */
-    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
-
-    background-image: url('../assets/side/frame1_horizontal.png');
-
-    background-repeat: repeat-x;    /* mengulang secara vertikal */
-    
-    background-size: contain;       /* menyesuaikan lebar gambar */
-    background-position: top left;    
-}
-
-.grid_bottom {
-    grid-column: span 4;
-
-    position: relative;             /* agar child dengan position absolute bisa bekerja */
-
-    width: auto;                    /* sesuaikan dengan kebutuhan */
-    height: 2.6rem;                   /* tinggi area yang ingin diisi gambar */
-
-    justify-items: center;            /* align secara horizontal */
-    align-self: flex-end;        /* align secara vertikal jika tidak pakai absolute */
-
-    background-image: url('../assets/side/frame1_horizontal_reverse.png');
-
-    background-repeat: repeat-x;    /* mengulang secara vertikal */
-    
-    background-size: contain;       /* menyesuaikan lebar gambar */
-    background-position: bottom left;    
-}
-
-
-
-/* Corner Sections */
-/* ============= */
-.cor_top_left {
+.cover_center {
     display: grid;
-    grid-column: span 4;
+    height: 80vh;
 
-    position: relative;             /* agar child dengan position absolute bisa bekerja */
-
-    width: 6.3rem; 
-    height: 6.3rem; 
-
-    justify-items: left;            /* align secara horizontal */
-    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
-
-    background-image: url('../assets/corner/frame1_horizontal.png');
-
-    background-size: cover;       /* menyesuaikan lebar gambar */
-    background-position: top left;
-    background-repeat: no-repeat;
+    grid-template-columns: repeat(12, 1fr);
+    /* background-color: aquamarine; */
 }
 
-.cor_top_right {
-    display: grid;
-    grid-column: span 4;
+.cover_subtitle {
+  letter-spacing: 0.4rem;
 
-    position: relative;             /* agar child dengan position absolute bisa bekerja */
-
-    width: 6.3rem; 
-    height: 6.3rem; 
-
-    justify-items: right;            /* align secara horizontal */
-    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
-
-    background-image: url('../assets/corner/frame1_horizontal_reverse.png');
-
-    background-size: cover;
-    background-position: top right;
-    background-repeat: no-repeat;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-.cor_bottom_left {
-    display: grid;
-    grid-column: span 4;
+.cover_name {
+  letter-spacing: 0.2rem;
 
-    position: relative;             /* agar child dengan position absolute bisa bekerja */
-
-    width: 6.3rem; 
-    height: 6.3rem; 
-
-    justify-items: left;            /* align secara horizontal */
-    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
-
-    background-image: url('../assets/corner/frame1_vertical.png');
-
-    background-size: cover;       /* menyesuaikan lebar gambar */
-    background-position: bottom left;
-    background-repeat: no-repeat;
+  font-size: 1.2rem;
+  text-align: center;
+  align-self: center;
 }
 
-.cor_bottom_right {
-    display: grid;
-    grid-column: span 4;
+.cover_guest {
+  letter-spacing: 0.2rem;
 
-    position: relative;             /* agar child dengan position absolute bisa bekerja */
+  font-size: 1.2rem;
+  text-align: center;
+  align-self: center;
+}
 
-    width: 6.3rem; 
-    height: 6.3rem; 
+.cover_invitation {
+  font-size: 1rem;
 
-    justify-items: left;            /* align secara horizontal */
-    align-items: flex-start;        /* align secara vertikal jika tidak pakai absolute */
+  text-align: center;
+  align-self: center;
+  
 
-    background-image: url('../assets/corner/frame1_vertical_reverse.png');
+  border: 3px;
+  border-color: white;
+  border-radius: 5px;
 
-    background-size: cover;       /* menyesuaikan lebar gambar */
-    background-position: bottom right;
-    background-repeat: no-repeat;
+  background-color: gray;
+  color: white;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.cover_invitation:hover {
+  background-color: gray;
+}
+
+.inisial {
+    width: 65%;
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+
+    align-self: center;
+}
+
+.gunungan {
+    width: 50%;
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+
+    align-self: center;
 }
