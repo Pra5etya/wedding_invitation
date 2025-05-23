@@ -1,98 +1,60 @@
-/* Cover HTML */
-/* ========== */
-.cover {
+.cover_section {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+
     height: 100vh;
 }
 
-.sections_cover {
+.cover_top {
     display: flex;
-    width: 100vw;
-}
+    flex-direction: row;
 
-.cover_top, 
-.cover_bottom {
-    display: flex;
-    position: relative;
-    height: 10vh;
-    
-    justify-content: space-between;
-    align-items: flex-start;
+    height: 10%;
+    width: 100%;
 
-    /* background-color: brown; */
+    padding: 0.2rem;
+
+    background-color: violet;
 }
 
 .cover_center {
-    display: grid;
-    height: 80vh;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
 
-    grid-template-columns: repeat(12, 1fr);
-    /* background-color: aquamarine; */
+    padding: 0.2rem;
+
+    height: 80%;
+    width: 100%;
+
+    background-color: blue;
 }
 
-.cover_subtitle {
-  letter-spacing: 0.4rem;
+.cover_bottom {
+    display: flex;
+    flex-direction: row;
 
-  font-size: 1.2rem;
-  text-align: center;
+    padding: 0.2rem;
+
+    height: 10%;
+    width: 100%;
+
+    background-color: red;
 }
 
-.cover_name {
-  letter-spacing: 0.2rem;
+.cover_content {
+    display: flex;
+    flex-direction: row;
 
-  font-size: 1.2rem;
-  text-align: center;
-  align-self: center;
+    height: 100%;
+    widows: 100%;
+
+    background-color: white;
 }
 
-.cover_guest {
-  letter-spacing: 0.2rem;
+.cover_initial {
+    display: flex;
 
-  font-size: 1.2rem;
-  text-align: center;
-  align-self: center;
-}
-
-.cover_invitation {
-  font-size: 1rem;
-
-  text-align: center;
-  align-self: center;
-  
-
-  border: 3px;
-  border-color: white;
-  border-radius: 5px;
-
-  background-color: gray;
-  color: white;
-
-  cursor: pointer;
-
-  transition: background-color 0.3s ease;
-}
-
-.cover_invitation:hover {
-  background-color: gray;
-}
-
-.inisial {
-    width: 65%;
-    height: auto;
-
-    display: block;
-    margin: 0 auto;
-
-    align-self: center;
-}
-
-.gunungan {
     width: 50%;
-    height: auto;
-
-    display: block;
-    margin: 0 auto;
-
-    align-self: center;
 }
