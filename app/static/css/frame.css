@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    /* aspect-ratio: 1/1; */
+    aspect-ratio: 1/1;
     
     height: 100%;
 
@@ -61,17 +61,12 @@
 
 .frame_center {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     flex: 80;
 
     width: 100%;             
     height: 100%;            
-    
-    flex-direction: column;
-    justify-content: center; 
-    align-items: flex-start; 
-
-    gap: 0.5rem;
 }
 
 .frame_right {
@@ -96,9 +91,9 @@
     display: flex;
     flex-wrap: wrap;
 
-    /* aspect-ratio: 1/1; */
-    width: 50%;
-    height: auto;
+    aspect-ratio: 1/1;
+
+    height: 100%;
 
     background-size: cover;
     background-repeat: no-repeat;

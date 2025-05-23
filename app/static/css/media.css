@@ -1,49 +1,7 @@
 /* Layout Device < 768px */
 /* ===================== */
 @media (max-width: 460px) {
-    /* ======================= */
-    section {
-    grid-template-rows: auto auto auto; /* biarkan tinggi otomatis */
-    }
 
-    /* ======================= */
-    .cor_top_left{
-        grid-column: span 1
-    }
-
-    .grid_top {
-        grid-column: span 10
-    }
-
-    .cor_top_right{
-        grid-column: span 1
-    }
-
-    /* ======================= */
-    .grid_left {
-        grid-column: span 1
-    }
-
-    .grid_center {
-        grid-column: span 10
-    }
-
-    .grid_right {
-        grid-column: span 1
-    }
-
-    /* ======================= */
-    .cor_bottom_left{
-        grid-column: span 1
-    }
-
-    .grid_bottom {
-        grid-column: span 10
-    }
-
-    .cor_bottom_right{
-        grid-column: span 1
-    }
 }
 
 /* Layout Device ≥ 768px */

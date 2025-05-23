@@ -1,4 +1,5 @@
-.cover_section {
+.cover_section, 
+.opening_section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -6,7 +7,8 @@
     height: 100vh;
 }
 
-.cover_top {
+.cover_top, 
+.opening_top {
     display: flex;
     flex-direction: row;
 
@@ -18,7 +20,8 @@
     background-color: violet;
 }
 
-.cover_center {
+.cover_center, 
+.opening_center {
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -31,30 +34,15 @@
     background-color: blue;
 }
 
-.cover_bottom {
+.cover_bottom, 
+.opening_bottom {
     display: flex;
     flex-direction: row;
-
-    padding: 0.2rem;
 
     height: 10%;
     width: 100%;
 
+    padding: 0.2rem;
+
     background-color: red;
-}
-
-.cover_content {
-    display: flex;
-    flex-direction: row;
-
-    height: 100%;
-    widows: 100%;
-
-    background-color: white;
-}
-
-.cover_initial {
-    display: flex;
-
-    width: 50%;
 }

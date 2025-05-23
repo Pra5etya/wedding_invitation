@@ -1,0 +1,32 @@
+/* Cover Sections */
+/* ============== */
+.cover_content {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    justify-content: space-around;
+
+    background-color: white;
+}
+
+.cover_initial {
+    display: flex;
+
+    width: 50%;
+}
+
+
+/* Opening Sections */
+/* ================ */
+.opening_content {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    justify-content: space-around;
+
+    background-color: yellowgreen;
+}

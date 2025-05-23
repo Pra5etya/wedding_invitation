@@ -7,8 +7,8 @@
 /* Frame */
 @import url(frame.css);
 
-/* Item Class */
-@import url(components.css);
+/* Section Component */
+@import url(component.css);
 
 /* Fonts */
 @import url(fonts.css);
