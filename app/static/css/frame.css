@@ -14,12 +14,12 @@
 }
 
 .cor_frame_tl {
-    background-image: url('../assets/corner/frame1_horizontal.png');
+    background-image: url('../assets/corner/frame1_horizontal.svg');
     background-position: top left;
 }
 
 .cor_frame_tr {
-    background-image: url('../assets/corner/frame1_horizontal_reverse.png');
+    background-image: url('../assets/corner/frame1_horizontal_reverse.svg');
     background-position: top right;
 }
 
@@ -29,11 +29,11 @@
     flex: 1;
     flex-wrap: wrap;
     
-    height: 40%;
+    height: 60%;
 
-    margin-top: 0.2rem;
+    /* margin-top: 0.2rem; */
     
-    background-image: url('../assets/side/frame1_horizontal.png');
+    background-image: url('../assets/side/frame1_horizontal.svg');
     
     background-repeat: repeat-x;
     background-size: contain;
@@ -53,8 +53,10 @@
 
     width: 50%; 
     height: 100%; 
+
+    margin-left: 0.5rem;
     
-    background-image: url('../assets/side/frame1_vertikal.png');
+    background-image: url('../assets/side/frame1_vertikal.svg');
     background-repeat: repeat-y;
     background-size: contain;
 }
@@ -78,8 +80,10 @@
 
     width: 40%; 
     height: 100%; 
+
+    margin-right: 0.5rem;
     
-    background-image: url('../assets/side/frame1_vertikal_reverse.png');
+    background-image: url('../assets/side/frame1_vertikal_reverse.svg');
     background-repeat: repeat-y;
     background-size: contain;
 }
@@ -100,12 +104,12 @@
 }
 
 .cor_frame_bl {
-    background-image: url('../assets/corner/frame1_vertical.png');
+    background-image: url('../assets/corner/frame1_vertical.svg');
     background-position: bottom left;
 }
 
 .cor_frame_br {
-    background-image: url('../assets/corner/frame1_vertical_reverse.png');
+    background-image: url('../assets/corner/frame1_vertical_reverse.svg');
     background-position: bottom right;
 }
 
@@ -115,12 +119,12 @@
     flex: 1;
     flex-wrap: wrap;
     
-    height: 40%;
+    height: 60%;
 
     margin-bottom: 0.2rem;
     align-self: flex-end;
     
-    background-image: url('../assets/side/frame1_horizontal_reverse.png');
+    background-image: url('../assets/side/frame1_horizontal_reverse.svg');
     
     background-repeat: repeat-x;
     background-size: contain;

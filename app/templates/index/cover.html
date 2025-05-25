@@ -9,10 +9,18 @@
     <div class = "cover_center">
         <div class = "frame_left"></div>
         <div class = "frame_center cover_content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, tempore?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, tempore?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, tempore?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, tempore?</p>
+            <img src = "{{ url_for('static', filename = 'assets/inisial.png') }}" class = "cover_initial">
+            <p class = "cover_invitation">Wedding Invitation</p>
+            <h2 class = "cover_name">Raka & Nurul</h2>
+            <p class = "cover_guest">Kepada Yth:</p>
+            <p class = "cover_guest"><strong>Tamu Undangan</strong></p>
+            <img src = "{{ url_for('static', filename = 'assets/gunungan.png') }}" 
+                    class = "cover_gunungan">
+            <button class = "cover_button">
+                <img src = "{{ url_for('static', filename = 'assets/icon/button.png') }}" 
+                        style = "margin-right: 0.3rem;">
+                Buka Undangan
+            </button>
         </div>
         <div class = "frame_right"></div>
     </div>
