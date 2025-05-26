@@ -1,5 +1,8 @@
+/* Sections */
+/* ======== */
 .cover_section, 
-.opening_section {
+.opening_section, 
+.agenda_section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -7,8 +10,9 @@
     height: 100vh;
 }
 
-.cover_top, 
-.opening_top {
+/* Top */
+/* === */
+.cover_top {
     display: flex;
     flex-direction: row;
 
@@ -17,11 +21,14 @@
 
     padding: 0.2rem;
 
-    background-color: violet;
+    /* background-color: violet; */
 }
 
+/* Center */
+/* ====== */
 .cover_center, 
-.opening_center {
+.opening_center, 
+.agenda_center {
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -31,11 +38,35 @@
     height: 80%;
     width: 100%;
 
-    background-color: blue;
+    /* background-color: blue; */
 }
 
-.cover_bottom, 
-.opening_bottom {
+.opening_center {
+    display: flex;
+
+    height: 100%;
+
+    flex-direction: column;
+}
+
+.agenda_center {
+    display: flex;
+    
+    height: 100%;
+
+    flex-direction: column;
+
+    background-image: url('../assets/agenda_frame.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top center;
+
+    /* background-color: violet; */
+}
+
+/* Bottom */
+/* ====== */
+.cover_bottom {
     display: flex;
     flex-direction: row;
 
@@ -44,5 +75,5 @@
 
     padding: 0.2rem;
 
-    background-color: red;
+    /* background-color: red; */
 }

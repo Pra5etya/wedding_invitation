@@ -8,44 +8,44 @@
 
     justify-content: flex-start;
 
-    background-color: white;
+    /* background-color: white; */
 }
 
 .cover_initial {
     display: flex;
 
-    width: 50%;
+    width: 60%;
 
     align-self: center;
 
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .cover_invitation {
     display: flex;
 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
     align-self: center;
 
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .cover_name {
     display: flex;
 
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 
     align-self: center;
 
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .cover_guest {
     display: flex;
 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
     align-self: center;
 
@@ -70,7 +70,8 @@
 .cover_button {
     display: flex;
 
-    width: auto;
+    width: 75%;
+    height: auto;
 
     font-size: 1rem;
     color: whitesmoke;
@@ -89,6 +90,7 @@
     background-color: #602A02;
 }
 
+
 /* Opening Sections */
 /* ================ */
 .opening_content {
@@ -97,14 +99,68 @@
 
     height: 100%;
 
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 
-.content_bismillah {
-    font-size: 24px; 
+.opening_bismillah {
+    display: flex;
+
+    font-size: 1.5rem; 
     font-family: 'Amiri', serif; 
-    direction: rtl
+    
+    direction: rtl;
+
+    margin-bottom: 0.5rem;
+}
+
+.opening_ucapan {
+    display: flex;
+    
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.opening_canvas {
+    display: flex;
+    flex-direction: column;
+
+    background-color: aquamarine;
+}
+
+.opening_canvas img {
+    display: flex;
+    flex-direction: row;
+
+    width: 50%;
+    height: auto;
+
+    border: 5px solid #ccc;
+
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+
+    background-color: white;
+}
+
+.opening_text {
+    text-align: center;
+}
+
+
+/* Agenda Sections */
+/* =============== */
+.agenda_canvas {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    /* background-color: bisque; */
 }
