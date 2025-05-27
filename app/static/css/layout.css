@@ -2,7 +2,8 @@
 /* ======== */
 .cover_section, 
 .opening_section, 
-.agenda_section {
+.agenda_section, 
+.cp_section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -28,7 +29,8 @@
 /* ====== */
 .cover_center, 
 .opening_center, 
-.agenda_center {
+.agenda_center, 
+.cp_center {
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -43,25 +45,46 @@
 
 .opening_center {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     height: 100%;
-
-    flex-direction: column;
+    padding: 2rem;
 }
 
 .agenda_center {
     display: flex;
+    flex-direction: column;
     
     height: 100%;
 
-    flex-direction: column;
+    padding: 4rem;
 
-    background-image: url('../assets/agenda_frame.png');
+    background-image: url('../assets/ornamen/frame1.png');
+
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: top center;
+    background-size: 98% 98%;
+    background-position: center;
 
     /* background-color: violet; */
+}
+
+.cp_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    height: 100%;
+
+    padding: 4rem;
+
+    text-align: center;
+
+    background-image: url('../assets/ornamen/frame2.png');
+
+    background-repeat: no-repeat;
+    background-size: 95% 97%;
+    background-position: center;
 }
 
 /* Bottom */

@@ -154,13 +154,36 @@
 }
 
 
-/* Agenda Sections */
+/* CP Sections */
 /* =============== */
-.agenda_canvas {
+.cp_canvas {
     display: flex;
     flex-direction: column;
 
+    margin-top: 1rem;
+
     text-align: center;
 
+    justify-content: space-between;
+
     /* background-color: bisque; */
+}
+
+.cp_canvas img {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+
+    border: 5px solid #ccc;
+
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+
+    background-color: white;
 }
