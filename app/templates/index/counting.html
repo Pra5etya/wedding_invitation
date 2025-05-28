@@ -1,0 +1,74 @@
+<div class="counting_section">
+    <div class="counting_center">
+        <h1>Undangan Pernikahan</h1>
+        <p>Pernikahan kami akan dilangsungkan pada:</p>
+        <h2>19 Juni 2025, 10:00 WIB</h2>
+
+        <div id="countdown">Memuat hitungan mundur...</div>
+
+        <!-- Tombol Simpan -->
+        <button class="calendar-btn" onclick="simpanKeKalender()">Simpan ke Calendar</button>
+    </div>
+</div>
+
+
+ <script>
+    const weddingDate = new Date("2025-06-19T05:00:00+07:00").getTime();
+
+    function countdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "Acara sudah dimulai!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+    }
+
+    function simpanKeKalender() {
+        // Informasi acara
+        const title = encodeURIComponent("Undangan Raka & Nurul");
+
+        // Lokasi bisa tetap singkat (nama gedung saja)
+        const location = encodeURIComponent("Museum Wayang Kekayon, Bantul");
+
+        // Link Google Maps
+        const mapsLink = "https://maps.app.goo.gl/FGvqu6ANUmMzYw7P9"; // Ganti dengan link asli
+
+        // Detail tambahan + link Google Maps
+        const details = encodeURIComponent(
+        "Yuk datang ke acara pernikahan kami!\n" +
+        "Dresscode: Formal\n\n" +
+        "📍 Lokasi: " + mapsLink + "\n\n" +
+        "Sampai jumpa!"
+        );
+
+        // Waktu UTC (WIB: +07:00 = UTC + 7 jam)
+        const startDateUTC = "20250619T050000Z"; // 10:00 WIB
+        const endDateUTC = "20250619T070000Z";   // 12:00 WIB
+
+        // Susun URL Google Calendar
+        const baseUrl = "https://www.google.com/calendar/render";
+        const url = `${baseUrl}?action=TEMPLATE`
+                + `&text=${title}`
+                + `&dates=${startDateUTC}/${endDateUTC}`
+                + `&location=${location}`
+                + `&details=${details}`
+                + `&sf=true&output=xml`;
+
+        // Buka di tab baru
+        window.open(url, "_blank");
+    }
+
+    // Jalankan countdown setiap detik
+    setInterval(countdown, 1000);
+    countdown(); // Jalankan saat halaman dimuat pertama kali
+  </script>

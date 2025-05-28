@@ -2,13 +2,20 @@
 /* ======== */
 .cover_section, 
 .opening_section, 
+.cp_section, 
 .agenda_section, 
-.cp_section {
+.counting_section,
+.galery_section, 
+.clossing_section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 
     height: 100vh;
+}
+
+.clossing_section {
+    height: 50vh;
 }
 
 /* Top */
@@ -30,7 +37,10 @@
 .cover_center, 
 .opening_center, 
 .agenda_center, 
-.cp_center {
+.cp_center, 
+.counting_center, 
+.galery_center, 
+.closing_center {
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -49,24 +59,7 @@
     justify-content: space-evenly;
 
     height: 100%;
-    padding: 2rem;
-}
-
-.agenda_center {
-    display: flex;
-    flex-direction: column;
-    
-    height: 100%;
-
-    padding: 4rem;
-
-    background-image: url('../assets/ornamen/frame1.png');
-
-    background-repeat: no-repeat;
-    background-size: 98% 98%;
-    background-position: center;
-
-    /* background-color: violet; */
+    padding: 1rem;
 }
 
 .cp_center {
@@ -86,6 +79,51 @@
     background-size: 95% 97%;
     background-position: center;
 }
+
+.agenda_center {
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+
+    padding: 4rem;
+
+    background-image: url('../assets/ornamen/frame3.png');
+
+    background-repeat: no-repeat;
+    background-size: 90% 97%;
+    background-position: center;
+
+    /* background-color: violet; */
+}
+
+.counting_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 100%;
+    padding: 1rem;
+}
+
+.galery_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 100%;
+    padding: 1rem;
+}
+
+.closing_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 100%;
+    padding: 1rem;
+}
+
 
 /* Bottom */
 /* ====== */

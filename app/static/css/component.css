@@ -105,57 +105,46 @@
     /* background-color: yellowgreen; */
 }
 
-.opening_bismillah {
+.opening_arabic {
     display: flex;
 
     font-size: 1.5rem; 
-    font-family: 'Amiri', serif; 
+    font-family: 'Amiri', serif;
+    font-weight: bold; 
+
+    align-self: right;
     
     direction: rtl;
 
     margin-bottom: 0.5rem;
 }
 
-.opening_ucapan {
-    display: flex;
+.opening_arti {
+    font-size: 1rem; 
+    font-style: italic; 
+
+    line-height: 1.5rem;
     
-    margin-bottom: 1rem;
-    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
-.opening_canvas {
-    display: flex;
-    flex-direction: column;
+.opening_space {
+    width: 40%; 
 
-    background-color: aquamarine;
+    border: 1px solid #ccc; 
+    margin: 1.5rem auto;
 }
 
-.opening_canvas img {
-    display: flex;
-    flex-direction: row;
-
-    width: 50%;
-    height: auto;
-
-    border: 5px solid #ccc;
-
-    border-top-left-radius: 6rem;
-    border-top-right-radius: 6rem;
-
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5rem;
-
-    background-color: white;
-}
 
 .opening_text {
-    text-align: center;
+    text-align: justify;
+
+    margin-bottom: 1rem;
 }
 
 
 /* CP Sections */
-/* =============== */
+/* =========== */
 .cp_canvas {
     display: flex;
     flex-direction: column;
@@ -186,4 +175,91 @@
     padding: 0.5rem;
 
     background-color: white;
+}
+
+
+/* Agenda Sections */
+/* =============== */
+.agenda_canvas {
+    background-color: whitesmoke;
+}
+
+
+/* Conting Sections */
+/* ================ */
+#countdown {
+      font-size: 2em;
+      color: #444;
+      margin: 20px 0;
+}
+
+button.calendar-btn {
+    background-color: #4285F4;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button.calendar-btn:hover {
+    background-color: #3367d6;
+}
+
+/* Galery Sections */
+/* =============== */
+.galery_canvas {
+    background-color: blanchedalmond;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1); /* Lebih halus */
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+
+/* Clossing Sections */
+/* ================= */
+.closing_canvas {
+    background-color: aquamarine;
 }

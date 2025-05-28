@@ -1,31 +1,31 @@
-# Sampul Depan (cover)
+# Rancangan Wedding Invitation
+## Sampul Depan (cover)
 Biasanya berisi:
 * Nama pasangan
 * Tanggal pernikahan
 * Elemen visual seperti ornamen, bunga, atau tema dekoratif
 
 Contoh dari gambar:
-
 ```bash
 “The Wedding of”
 “Nama Pasangan”
 Tanggal
 ```
 
-# Pembuka atau Ucapan Salam (opening)
+## Pembuka atau Ucapan Salam (opening)
 Misalnya:
 ```bash
 Assalamu’alaikum warahmatullahi wabarakatuh
 Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami…
 ```
 
-# Nama Kedua Mempelai (profile)
+## Nama Kedua Mempelai (profile)
 Format umum:
 * Nama lengkap mempelai pria
 * Nama lengkap mempelai wanita
 * Bisa disertai nama orang tua masing-masing
 
-# Tanggal dan Waktu Acara (agenda)
+## Tanggal dan Waktu Acara (agenda)
 Rincian waktu akad:
 * Hari, tanggal
 * Jam
@@ -36,11 +36,18 @@ Rincian waktu resepsi:
 * Jam
 * Tempat / alamat
 
-# photo (galery)
+## photo (galery)
 gambar CP
 
-# Kirim hadiah (gift)
+## Kirim hadiah (gift)
 Biasanya norek dsbnya
 
-# Ucapan Terima Kasih (saying)
+## Ucapan Terima Kasih (saying)
 Ucapan Terimakasih
+
+
+# Catatan
+Untuk CP pria dan wanita 1 section sendiri
+Untuk Agenda akad dan resepsi 1 section sendiri
+galeri 2 section atau berapa?? -> carouslel
+Penutup
