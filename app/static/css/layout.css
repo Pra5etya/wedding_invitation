@@ -1,3 +1,43 @@
+/* =========== */
+/* MOBILE ONLY */
+/* =========== */
+.wrapper {
+  max-width: 480px;
+  min-height: 100dvh;
+
+  box-shadow: 0 0 0 9999px black;
+}
+
+/* Isi konten dalam wrapper */
+.content {
+  padding: 0rem;
+}
+
+/* Peringatan orientasi */
+#orientation-warning {
+  display: none;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  
+  width: 100dvw;
+  height: 100dvh;
+  
+  background-color: black;
+  color: white;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+
+
 /* Sections */
 /* ======== */
 .cover_section, 
@@ -6,7 +46,7 @@
 .agenda_section, 
 .counting_section,
 .galery_section, 
-.clossing_section {
+.closing_section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -69,7 +109,7 @@
     
     height: 100%;
 
-    padding: 4rem;
+    padding: 4.5rem;
 
     text-align: center;
 

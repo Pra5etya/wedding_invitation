@@ -1,53 +1,20 @@
-# Rancangan Wedding Invitation
-## Sampul Depan (cover)
-Biasanya berisi:
-* Nama pasangan
-* Tanggal pernikahan
-* Elemen visual seperti ornamen, bunga, atau tema dekoratif
+# Sample 1 Opening
+Bismillāhirraḥmānirraḥīm
 
-Contoh dari gambar:
-```bash
-“The Wedding of”
-“Nama Pasangan”
-Tanggal
-```
+Segala puji bagi Allah SWT, Dzat Yang Maha Pengasih lagi Maha Penyayang. Shalawat dan salam semoga tercurah kepada Nabi Muhammad SAW, beserta keluarga dan para sahabatnya.
 
-## Pembuka atau Ucapan Salam (opening)
-Misalnya:
-```bash
-Assalamu’alaikum warahmatullahi wabarakatuh
-Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami…
-```
+Dengan penuh syukur dan kerendahan hati, kami memohon doa restu atas rencana pernikahan putra-putri kami. Semoga ikatan suci ini menjadi awal kehidupan yang penuh berkah, kasih sayang, dan rahmat dari Allah SWT.
 
-## Nama Kedua Mempelai (profile)
-Format umum:
-* Nama lengkap mempelai pria
-* Nama lengkap mempelai wanita
-* Bisa disertai nama orang tua masing-masing
-
-## Tanggal dan Waktu Acara (agenda)
-Rincian waktu akad:
-* Hari, tanggal
-* Jam
-* Tempat / alamat
-
-Rincian waktu resepsi:
-* Hari, tanggal
-* Jam
-* Tempat / alamat
-
-## photo (galery)
-gambar CP
-
-## Kirim hadiah (gift)
-Biasanya norek dsbnya
-
-## Ucapan Terima Kasih (saying)
-Ucapan Terimakasih
+Dengan memohon ridha-Nya, kami bermaksud menyelenggarakan pernikahan putra-putri kami:
 
 
-# Catatan
-Untuk CP pria dan wanita 1 section sendiri
-Untuk Agenda akad dan resepsi 1 section sendiri
-galeri 2 section atau berapa?? -> carouslel
-Penutup
+# Sample 2 Opening
+Bismillāhirraḥmānirraḥīm
+
+Segala puji bagi Allah Subḥānahu wa Ta'ālā, Dzat Yang Maha Pengasih lagi Maha Penyayang, atas limpahan rahmat dan karunia-Nya dalam setiap langkah kehidupan.
+
+Shalawat serta salam senantiasa tercurah kepada junjungan mulia, Nabi Muhammad SAW, beserta keluarga dan para sahabat beliau.
+
+Dengan memohon ridha dan rahmat Allah SWT, serta disertai rasa syukur yang mendalam, kami bermaksud menyelenggarakan pernikahan putra-putri kami. Kami mohon kehadiran serta doa restu Bapak/Ibu/Saudara(i), agar pernikahan ini menjadi awal dari kehidupan yang penuh berkah, sakinah, mawaddah, dan rahmah.
+
+Adapun putra-putri kami yang akan melangsungkan pernikahan adalah:

@@ -1,16 +1,30 @@
+<!-- base.html -->
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meta charset = "UTF-8">
-    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/main.css') }}">
-    <link rel = "icon" type = "image/png" href = "{{ url_for('static', filename = 'assets/icon/tab.png') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/icon/tab.png') }}" />
 
-    <title>{% block title %} Default {% endblock %}</title>
+  <title>{% block title %} Default {% endblock %}</title>
 </head>
+
 <body>
+  <!-- Peringatan Orientasi -->
+  <div id="orientation-warning">
+    <div>
+      <h2>Harap Gunakan Mode Mobile</h2>
+      <p>Putar perangkat Anda ke posisi tegak (portrait) untuk pengalaman terbaik.</p>
+    </div>
+  </div>
+
+  <!-- Konten Utama -->
+  <div class="wrapper" id="main-content">
     {% block content %}{% endblock %}
-    {% block scripts %}{% endblock %}
+  </div>
+
+  <script type="module" src="{{ url_for('static', filename = 'js/main.js') }}" defer></script>
 </body>
 </html>
