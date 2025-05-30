@@ -1,26 +1,29 @@
 <div class="counting_section">
     <div class="counting_center">
-        <h1>Undangan Pernikahan</h1>
-        <p>Pernikahan kami akan dilangsungkan pada:</p>
-        <h2>19 Juni 2025, 10:00 WIB</h2>
+        <p class="counting_title">Undangan Pernikahan</p>
+        <p class="counting_text">Pernikahan kami akan dilangsungkan pada:</p>
+        <p class="counting_date">19 Juni 2025, 12:00 WIB</p>
 
-        <div id="countdown">Memuat hitungan mundur...</div>
+        <p class="countdown_title">countdown</p>
+        <div id="countdown">Hitung Mundur...</div>
 
         <!-- Tombol Simpan -->
-        <button class="calendar-btn" onclick="simpanKeKalender()">Simpan ke Calendar</button>
+        <button class="calendar-btn" onclick="simpanKeKalender()">Simpan Tanggal</button>
     </div>
 </div>
 
 
  <script>
-    const weddingDate = new Date("2025-06-19T05:00:00+07:00").getTime();
+    const weddingDate = new Date("2025-06-19T00:00:00+07:00").getTime();
 
     function countdown() {
       const now = new Date().getTime();
       const distance = weddingDate - now;
 
+      const countdownElement = document.getElementById("countdown");
+
       if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "Acara sudah dimulai!";
+        countdownElement.innerHTML = "🎉 Acara sudah dimulai! 🎉";
         return;
       }
 
@@ -29,31 +32,35 @@
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("countdown").innerHTML =
-        `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+      // Fungsi untuk padding angka dengan 0 di depan jika < 10
+      const pad = (num) => num.toString().padStart(2, '0');
+
+      countdownElement.innerHTML = `
+        <div style="font-size: 1.5em; font-weight: bold; text-align: center; color: #2c3e50;">
+          <span>${days} Hari</span> 
+          <span>${pad(hours)} Jam</span> 
+          <span>${pad(minutes)} Menit</span> 
+          <span>${pad(seconds)} Detik</span>
+        </div>
+      `;
     }
 
     function simpanKeKalender() {
-        // Informasi acara
         const title = encodeURIComponent("Undangan Raka & Nurul");
 
-        // Lokasi bisa tetap singkat (nama gedung saja)
         const location = encodeURIComponent("Museum Wayang Kekayon, Bantul");
 
-        // Link Google Maps
         const mapsLink = "https://maps.app.goo.gl/FGvqu6ANUmMzYw7P9"; // Ganti dengan link asli
 
-        // Detail tambahan + link Google Maps
         const details = encodeURIComponent(
         "Yuk datang ke acara pernikahan kami!\n" +
-        "Dresscode: Formal\n\n" +
         "📍 Lokasi: " + mapsLink + "\n\n" +
         "Sampai jumpa!"
         );
 
         // Waktu UTC (WIB: +07:00 = UTC + 7 jam)
-        const startDateUTC = "20250619T050000Z"; // 10:00 WIB
-        const endDateUTC = "20250619T070000Z";   // 12:00 WIB
+        const startDateUTC = "20250619T050000Z"; // 12:00 WIB
+        const endDateUTC = "20250619T070000Z";   // 14:00 WIB
 
         // Susun URL Google Calendar
         const baseUrl = "https://www.google.com/calendar/render";
@@ -64,11 +71,10 @@
                 + `&details=${details}`
                 + `&sf=true&output=xml`;
 
-        // Buka di tab baru
         window.open(url, "_blank");
     }
 
     // Jalankan countdown setiap detik
     setInterval(countdown, 1000);
-    countdown(); // Jalankan saat halaman dimuat pertama kali
+    countdown();
   </script>

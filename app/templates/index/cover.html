@@ -16,7 +16,9 @@
             <p class = "cover_guest"><strong>Tamu Undangan</strong></p>
             <img src = "{{ url_for('static', filename = 'assets/gunungan.png') }}" 
                     class = "cover_gunungan">
-            <button class = "cover_button">
+
+            <button class = "cover_button" 
+            onclick="unlockScrollAndScrollDown()">
                 <img src = "{{ url_for('static', filename = 'assets/icon/button.png') }}" 
                         style = "margin-right: 0.3rem;">
                 Buka Undangan
@@ -31,3 +33,13 @@
         <div class = "cor_frame_br"></div>
     </div>
 </div>
+
+<script>
+  function unlockScrollAndScrollDown() {
+    // Hilangkan class yang mengunci scroll
+    document.body.classList.remove('lock-scroll');
+
+    // Scroll ke section opening
+    document.getElementById('opening').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>

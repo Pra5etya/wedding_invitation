@@ -1,14 +1,30 @@
-<div class = "agenda_section">
-    <div class = "agenda_center">
-    <p>akad nikah</p>
-    <p>Dilaksanakann pada: </p>
-    <p>Kamis</p>
-    <p>19 Juni 2025</p>
-    <p>pukul 08:00 ~ 09:00</p>
-    <p>Icon Maps</p>
-    <p>Bertempat di: </p>
-    <p>Museum Kekayon</p>
-    <p>Alamat Kekayon</p>
-    <p>google maps</p>
+<div class="agenda_section">
+    <div class="agenda_center">
+        <div class="agenda_canvas">
+            <img src="{{ url_for('static', filename = 'assets/akad_1.png') }}">
+        </div>
+        
+        <p class="agenda_head">Akad Nikah</p>
+        
+        <div class="agenda_text">
+            <p>Dilaksanakann pada: </p>
+            <p>Kamis, 19 Juni 2025</p>
+            <p>pukul: 08:00 ~ 09:00</p>
+        </div>
+
+        <div class="agenda_text">
+            <p>Bertempat di: </p>
+            <p>Museum Kekayon</p>
+            <p>Jl. Jogja-Wonosari Km 7 No 277, National Rte 3, 
+                Kalangan, Baturetno, Banguntapan, Bantul, Yogyakarta
+            </p>
+        </div>
+
+        <button type="button" 
+            class="agenda_button" 
+            onclick="location.href='https://maps.app.goo.gl/ytaqNE2URaVRihzq5'">
+                <img src = "{{ url_for('static', filename = 'assets/icon/maps.svg') }}">
+                Lihat Lokasi
+        </button>
     </div>
 </div>
