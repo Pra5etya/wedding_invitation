@@ -1,0 +1,108 @@
+<div class="cover_section">
+    <div class="cover_top">
+        <img src="{{ url_for('static', filename = 'assets/inisial.png') }}">
+        <p class="content_invite">Wedding Invitation</p>
+        <p class="content_name">Raka & Nurul</p>
+
+        <div class="content_guest">
+            <p>Kepada Yth:</p>
+            <p><strong>Tamu Undangan</strong></p>
+        </div>
+    </div>
+
+    <div class="cover_center">
+        <div class="content_left">
+            <img src="{{ url_for('static', filename = 'assets/wayang/rama.png') }}">
+        </div>
+
+        <!-- <div class="content_center">
+            <img src="{{ url_for('static', filename = 'assets/wayang/ramayana.png') }}">
+        </div> -->
+        
+        <div class="content_right">
+            <img src="{{ url_for('static', filename = 'assets/wayang/sinta.png') }}">
+        </div>
+    </div>
+
+    <div class="cover_bottom">
+        <button class="cover_button" id="play-button" onclick="handleInvitation()">Buka Undangan</button>
+    </div>
+</div>
+
+
+
+
+<!-- Coutning -->
+
+<div class="counting_section">
+  <div class="counting_center">
+    <div class="counting_title">COUNTING THE DAYS</div>
+    <div class="countdown_display" id="countdown">
+      <div class="time_box">
+        <div class="time_number" id="days">0</div>
+        <div>Hari</div>
+      </div>
+      <div class="time_box">
+        <div class="time_number" id="hours">0</div>
+        <div>Jam</div>
+      </div>
+      <div class="time_box">
+        <div class="time_number" id="minutes">0</div>
+        <div>Menit</div>
+      </div>
+      <div class="time_box">
+        <div class="time_number" id="seconds">0</div>
+        <div>Detik</div>
+      </div>
+    </div>
+    <button class="calendar-btn" onclick="simpanKeKalender()">🗓️ ADD TO CALENDAR</button>
+  </div>
+</div>
+
+<script>
+  const weddingDate = new Date("2025-06-19T12:00:00+07:00").getTime();
+
+  function countdown() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "<p>🎉 Acara sudah dimulai! 🎉</p>";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+    document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+    document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+  }
+
+  setInterval(countdown, 1000);
+  countdown();
+
+  function simpanKeKalender() {
+    const title = encodeURIComponent("Undangan Raka & Nurul");
+    const location = encodeURIComponent("Museum Wayang Kekayon, Bantul");
+    const mapsLink = "https://maps.app.goo.gl/FGvqu6ANUmMzYw7P9";
+    const details = encodeURIComponent(
+      "Yuk datang ke acara pernikahan kami!\n📍 Lokasi: " + mapsLink + "\n\nSampai jumpa!"
+    );
+
+    const startDateUTC = "20250619T050000Z";
+    const endDateUTC = "20250619T070000Z";
+
+    const url = `https://www.google.com/calendar/render?action=TEMPLATE`
+              + `&text=${title}`
+              + `&dates=${startDateUTC}/${endDateUTC}`
+              + `&location=${location}`
+              + `&details=${details}`
+              + `&sf=true&output=xml`;
+
+    window.open(url, "_blank");
+  }
+</script>

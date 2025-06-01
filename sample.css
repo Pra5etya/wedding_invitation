@@ -1,0 +1,118 @@
+.counting_text {
+    font-size: 1.5rem;
+
+    margin-top: 1.5rem;
+}
+
+.counting_date {
+    font-size: 2rem;
+
+    margin-top: 1.5rem;
+}
+
+.countdown_title {
+    font-size: 2.8rem;
+
+    margin-top: 1.5rem;
+}
+
+#countdown {
+      font-size: 2rem;
+      color: #444;
+      margin-top: 1rem;
+}
+
+button.calendar-btn {
+    background-color: #4285F4;
+    color: white;
+
+    padding: 1rem 1.5rem;
+    border: none;
+    
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button.calendar-btn:hover {
+    background-color: #3367d6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Versi WEBKUDIGITAL */
+/* ====================== */
+
+
+body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .counting_section {
+      background: url('YOUR_IMAGE_PATH.png') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .counting_center {
+      background: rgba(0, 0, 0, 0.4); /* semi-transparent background */
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    .counting_title {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .countdown_display {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 1.5em;
+    }
+
+    .time_box {
+      text-align: center;
+    }
+
+    .time_number {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .calendar-btn {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #d6b37f;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .calendar-btn:hover {
+      background-color: #c09c68;
+    }

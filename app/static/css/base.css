@@ -3,7 +3,13 @@
   padding: 0;
 
   box-sizing: border-box;
+
+  font-family: 'font_playfair_regular';
 }
+
+/* body.lock-scroll {
+  overflow: hidden;
+} */
 
 html, body {
   margin: 0;
@@ -26,14 +32,7 @@ html, body {
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: local;
-
-  overflow-x: hidden;
 }
-
-body.lock-scroll {
-  overflow: hidden;
-}
-
 
 audio {
   display: none;

@@ -1,10 +1,8 @@
-// import file
-import './audio.js';
-import './lock.js';
-import { initOrientationCheck, checkOrientation } from './orientation.js';
+import { initOrientationCheck } from './orientation.js';
+import { initCover } from './cover.js';
 
-console.log("Main.js loaded");
-
-console.log('Running orientation scripts')
+console.log('Run Orientation Scripts...')
 initOrientationCheck();
-checkOrientation();
+
+console.log('Run Cover Scripts...')
+// initCover();

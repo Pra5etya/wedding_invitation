@@ -1,76 +1,118 @@
 /* Cover Sections */
 /* ============== */
-.cover_content {
-    display: flex;
-    flex-direction: column;
-
-    height: 100%;
-
-    justify-content: flex-start;
-
-    /* background-color: white; */
-}
-
-.cover_initial {
+.cover_top img {
     display: flex;
 
-    width: 60%;
+    width: 50%;
 
     align-self: center;
 
     margin-top: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.cover_invitation {
-    display: flex;
-
-    font-size: 1.2rem;
-
-    align-self: center;
-
     margin-bottom: 0.5rem;
 }
 
-.cover_name {
+.content_invite {
     display: flex;
 
-    font-size: 2.2rem;
+    font-size: 1.5rem;
 
     align-self: center;
 
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
 }
 
-.cover_guest {
+.content_name {
     display: flex;
 
-    font-size: 1.2rem;
+    font-size: 2.5rem;
 
     align-self: center;
 
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
 }
 
-.cover_gunungan {
+.content_guest {
     display: flex;
+    flex-direction: column;
 
-    width: 35%;
-    height: 25%;
+    font-size: 1.5rem;
+    text-align: center;
+
+    align-self: center;
+}
+
+/* left */
+.content_left {
+    display: flex;
+    flex-direction: row;
+
+    flex: 37;
+
+    align-self: flex-end;
+
+    padding: 1rem;
+}
+
+.content_left img {
+    transform: scaleX(-1);
+
+    width: 100%;
+    height: auto;
+
+    background-position: top left;
+    align-self: center;
+}
+
+/* center */
+.content_center {
+    display: flex;
+    flex-direction: column;
+
+    flex: 26;
+
+    align-self: flex-end;
+}
+
+.content_center img {
+    width: 100%;
+    height: auto;
 
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: top center;
 
     align-self: center;
 
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 
+
+/* right */
+.content_right {
+    display: flex;
+    flex-direction: row;
+
+    flex: 37;
+
+    align-self: flex-end;
+
+    padding: 1rem;
+}
+
+.content_right img {
+    width: 100%;
+    height: auto;
+
+    background-position: top right;
+    align-self: center;
+}
+
+
+/* bottom */
 .cover_button {
     display: flex;
 
-    width: 75%;
+    width: auto;
     height: auto;
 
     font-size: 1rem;
@@ -80,14 +122,22 @@
     align-items: center;
     align-self: center;
 
+    font-size: 1.5rem;
+
+    border-radius: 1rem;
+    padding: 0.5rem;
+
     background-color: black;
 
-    border-radius: 0.5rem;
-    padding: 0.2rem;
+    border: 2px solid #6e340a; 
+    transition: all 1s ease;
 }
 
 .cover_button:hover {
-    background-color: #602A02;
+    background-color: #232323;
+
+    color: whitesmoke;
+    cursor: pointer;
 }
 
 
@@ -105,38 +155,49 @@
     /* background-color: yellowgreen; */
 }
 
-.opening_arabic {
+.opening_basmalah {
+    margin-top: 1rem;
+}
+
+.opening_arabic, 
+.closing_arabic {
     display: flex;
 
-    font-size: 1.5rem; 
+    font-size: 2rem; 
     font-family: 'Amiri', serif;
     font-weight: bold; 
 
-    align-self: right;
+    text-align: right;
+    justify-content: center;
     
     direction: rtl;
 
     margin-bottom: 0.5rem;
 }
 
-.opening_arti {
+.opening_arti, 
+.closing_arti {
     font-size: 1rem; 
     font-style: italic; 
+
+    justify-content: center;
+    text-align: justify;
 
     line-height: 1.5rem;
     
     margin-bottom: 0.5rem;
 }
 
-.opening_space {
+.opening_space, 
+.closing_space {
     width: 40%; 
 
     border: 1px solid black; 
     margin: 1.5rem auto;
 }
 
-
-.opening_text {
+.opening_text, 
+.closing_text {
     text-align: justify;
 
     margin-bottom: 1rem;
@@ -149,7 +210,7 @@
     display: flex;
     flex-direction: column;
 
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 
     text-align: center;
 
@@ -162,32 +223,38 @@
     display: flex;
     flex-direction: column;
 
-    width: 100%;
+    width: 90%;
     height: auto;
 
-    border: 5px solid #ccc;
+    /* border: 5px solid #6e340a; */
 
     border-top-left-radius: 6rem;
     border-top-right-radius: 6rem;
 
     margin-left: auto;
     margin-right: auto;
-    padding: 0.5rem;
+    padding: 1rem;
 
     /* background-color: white; */
 }
 
 .cp_name {
+    font-family: 'font_libre_regular';
+    font-size: 1.5rem;
+    font-weight: bold;
+
     text-align: center;
 
-    margin-top: 1rem;
-    margin-bottom: 1rem
+    margin: 1rem auto 1rem;
 }
 
 .cp_text {
+    font-size: 1.2rem;
+
     text-align: center;
 
-    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 
@@ -205,20 +272,25 @@
 .agenda_canvas img {
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-self: center;
 
     width: 50%;
     height: auto;
 
+    margin-top: 1rem;
     padding: 0.5rem;
 }
 
 .agenda_head {
     display: flex;
     flex-direction: column;
-    text-align: center;
 
+    width: 100%;
+    height: auto;
+
+    text-align: center;
     font-size: 2.5rem;
 
     margin-top: 1rem;
@@ -229,11 +301,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
     text-align: center;
 
     font-size: 1.4rem;
 
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
 
     line-height: 2.5rem;
 }
@@ -242,9 +315,9 @@
     display: flex;
 
     width: 50%;
-    height: 2rem;
+    height: auto;
 
-    font-size: 1rem;
+    font-size: 1.5rem;
 
     justify-content: center;
     align-items: center;
@@ -253,11 +326,11 @@
     border-radius: 0.5rem;
     padding: 0.2rem;
 
-    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .agenda_button img {
-    width: 1rem;
+    width: 1.5rem;
     height: auto;
 
     margin-right: 0.3rem;
@@ -272,47 +345,12 @@
     font-size: 2.8rem;
 }
 
-.counting_text {
-    font-size: 1.5rem;
 
-    margin-top: 1.5rem;
-}
 
-.counting_date {
-    font-size: 2rem;
 
-    margin-top: 1.5rem;
-}
 
-.countdown_title {
-    font-size: 2.8rem;
 
-    margin-top: 1.5rem;
-}
 
-#countdown {
-      font-size: 2rem;
-      color: #444;
-      margin-top: 1rem;
-}
-
-button.calendar-btn {
-    background-color: #4285F4;
-    color: white;
-
-    padding: 1rem 1.5rem;
-    border: none;
-    
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-button.calendar-btn:hover {
-    background-color: #3367d6;
-}
 
 /* Galery Sections */
 /* =============== */

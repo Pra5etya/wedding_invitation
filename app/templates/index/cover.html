@@ -1,45 +1,30 @@
-<div class = "cover_section">
+<div class="cover_section">
+    <div class="cover_top">
+        <img src="{{ url_for('static', filename = 'assets/inisial.png') }}">
+        <p class="content_invite">Wedding Invitation</p>
+        <p class="content_name">Raka & Nurul</p>
 
-    <div class = "cover_top">
-        <div class = "cor_frame_tl"></div>
-        <div class = "frame_top"></div>
-        <div class = "cor_frame_tr"></div>
-    </div>
-
-    <div class = "cover_center">
-        <div class = "frame_left"></div>
-        <div class = "frame_center cover_content">
-            <img src = "{{ url_for('static', filename = 'assets/inisial.png') }}" class = "cover_initial">
-            <p class = "cover_invitation">Wedding Invitation</p>
-            <h2 class = "cover_name">Raka & Nurul</h2>
-            <p class = "cover_guest">Kepada Yth:</p>
-            <p class = "cover_guest"><strong>Tamu Undangan</strong></p>
-            <img src = "{{ url_for('static', filename = 'assets/gunungan.png') }}" 
-                    class = "cover_gunungan">
-
-            <button class = "cover_button" 
-            onclick="unlockScrollAndScrollDown()">
-                <img src = "{{ url_for('static', filename = 'assets/icon/button.png') }}" 
-                        style = "margin-right: 0.3rem;">
-                Buka Undangan
-            </button>
+        <div class="content_guest">
+            <p>Kepada Yth:</p>
+            <p><strong>Tamu Undangan</strong></p>
         </div>
-        <div class = "frame_right"></div>
     </div>
-    
-    <div class = "cover_bottom">
-        <div class = "cor_frame_bl"></div>
-        <div class = "frame_bottom"></div>
-        <div class = "cor_frame_br"></div>
+
+    <div class="cover_center">
+        <div class="content_left">
+            <img src="{{ url_for('static', filename = 'assets/wayang/rama.png') }}">
+        </div>
+
+        <!-- <div class="content_center">
+            <img src="{{ url_for('static', filename = 'assets/wayang/ramayana.png') }}">
+        </div> -->
+        
+        <div class="content_right">
+            <img src="{{ url_for('static', filename = 'assets/wayang/sinta.png') }}">
+        </div>
+    </div>
+
+    <div class="cover_bottom">
+        <button class="cover_button" id="play-button">Buka Undangan</button>
     </div>
 </div>
-
-<script>
-  function unlockScrollAndScrollDown() {
-    // Hilangkan class yang mengunci scroll
-    document.body.classList.remove('lock-scroll');
-
-    // Scroll ke section opening
-    document.getElementById('opening').scrollIntoView({ behavior: 'smooth' });
-  }
-</script>
