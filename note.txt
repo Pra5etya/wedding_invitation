@@ -1,0 +1,5 @@
+fill warna hitam
+stroke hitam arang
+latar belakang transparant
+
+frame color -> #6e340a
