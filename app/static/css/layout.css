@@ -63,6 +63,8 @@
     background-size: 100% 100%;
 
     background-repeat: no-repeat;
+    background-position: center center;
+
     background-attachment: scroll;
 }
 
@@ -73,7 +75,9 @@
     background-size: 100% 100%;
 
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
+
+    background-attachment: scroll;
 }
 
 .agenda_section {
@@ -82,10 +86,27 @@
     justify-content: flex-start;
     
     background-image: url('../assets/frame/frame_agenda.png');
-    background-repeat: no-repeat;
-    
     background-size: 100% 100%;
-    background-position: center;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    background-attachment: scroll;
+}
+
+.counting_section {
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    background: url('../assets/wayang/ramayana.png');
+    background-repeat: no-repeat;
+
+    background-position: center center;
+    background-size: cover;
+
+    background-attachment: scroll;
 }
 
 .closing_section {
@@ -158,7 +179,6 @@
 
 /* ============================================= */
 .cp_center {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     
@@ -171,7 +191,6 @@
 
 /* ============================================= */
 .agenda_center {
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     
@@ -182,11 +201,17 @@
 
 /* ============================================= */
 .counting_center {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
     padding: 2rem;
+
+    background: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+    
+    border-radius: 10px;
+    
+    text-align: center;
+    color: white;
 }
 
 /* ============================================= */

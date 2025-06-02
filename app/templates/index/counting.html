@@ -1,80 +1,78 @@
 <div class="counting_section">
-    <div class="counting_center">
-        <p class="counting_title">Hitung Hari</p>
-        <!-- <p class="counting_text">Pernikahan kami akan dilangsungkan pada:</p> -->
-        <!-- <p class="counting_date">19 Juni 2025, 12:00 WIB</p> -->
-
-        <p class="countdown_title">countdown</p>
-        <div id="countdown">Hitung Mundur...</div>
-
-        <!-- Tombol Simpan -->
-        <button class="calendar-btn" onclick="simpanKeKalender()">Simpan Tanggal</button>
+  <div class="counting_center">
+    <div class="counting_title">COUNTING THE DAYS</div>
+    
+    <div class="countdown_display" id="countdown">
+      <div class="time_box">
+        <div class="time_number" id="days">0</div>
+        <div>Hari</div>
+      </div>
+      
+      <div class="time_box">
+        <div class="time_number" id="hours">0</div>
+        <div>Jam</div>
+      </div>
+      
+      <div class="time_box">
+        <div class="time_number" id="minutes">0</div>
+        <div>Menit</div>
+      </div>
+      
+      <div class="time_box">
+        <div class="time_number" id="seconds">0</div>
+        <div>Detik</div>
+      </div>
     </div>
+
+    <button class="calendar-btn" onclick="simpanKeKalender()">🗓️ ADD TO CALENDAR</button>
+  </div>
 </div>
 
 
- <script>
-    const weddingDate = new Date("2025-06-19T00:00:00+07:00").getTime();
+<!-- <script>
+  const weddingDate = new Date("2025-06-19T12:00:00+07:00").getTime();
 
-    function countdown() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
+  function countdown() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
 
-      const countdownElement = document.getElementById("countdown");
-
-      if (distance < 0) {
-        countdownElement.innerHTML = "🎉 Acara sudah dimulai! 🎉";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Fungsi untuk padding angka dengan 0 di depan jika < 10
-      const pad = (num) => num.toString().padStart(2, '0');
-
-      countdownElement.innerHTML = `
-        <div style="font-size: 1.5em; font-weight: bold; text-align: center; color: #2c3e50;">
-          <span>${days} Hari</span> 
-          <span>${pad(hours)} Jam</span> 
-          <span>${pad(minutes)} Menit</span> 
-          <span>${pad(seconds)} Detik</span>
-        </div>
-      `;
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "<p>🎉 Acara sudah dimulai! 🎉</p>";
+      return;
     }
 
-    function simpanKeKalender() {
-        const title = encodeURIComponent("Undangan Raka & Nurul");
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        const location = encodeURIComponent("Museum Wayang Kekayon, Bantul");
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+    document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+    document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+  }
 
-        const mapsLink = "https://maps.app.goo.gl/FGvqu6ANUmMzYw7P9"; // Ganti dengan link asli
+  setInterval(countdown, 1000);
+  countdown();
 
-        const details = encodeURIComponent(
-        "Yuk datang ke acara pernikahan kami!\n" +
-        "📍 Lokasi: " + mapsLink + "\n\n" +
-        "Sampai jumpa!"
-        );
+  function simpanKeKalender() {
+    const title = encodeURIComponent("Undangan Raka & Nurul");
+    const location = encodeURIComponent("Museum Wayang Kekayon, Bantul");
+    const mapsLink = "https://maps.app.goo.gl/FGvqu6ANUmMzYw7P9";
+    const details = encodeURIComponent(
+      "Yuk datang ke acara pernikahan kami!\n📍 Lokasi: " + mapsLink + "\n\nSampai jumpa!"
+    );
 
-        // Waktu UTC (WIB: +07:00 = UTC + 7 jam)
-        const startDateUTC = "20250619T050000Z"; // 12:00 WIB
-        const endDateUTC = "20250619T070000Z";   // 14:00 WIB
+    const startDateUTC = "20250619T050000Z";
+    const endDateUTC = "20250619T070000Z";
 
-        // Susun URL Google Calendar
-        const baseUrl = "https://www.google.com/calendar/render";
-        const url = `${baseUrl}?action=TEMPLATE`
-                + `&text=${title}`
-                + `&dates=${startDateUTC}/${endDateUTC}`
-                + `&location=${location}`
-                + `&details=${details}`
-                + `&sf=true&output=xml`;
+    const url = `https://www.google.com/calendar/render?action=TEMPLATE`
+              + `&text=${title}`
+              + `&dates=${startDateUTC}/${endDateUTC}`
+              + `&location=${location}`
+              + `&details=${details}`
+              + `&sf=true&output=xml`;
 
-        window.open(url, "_blank");
-    }
-
-    // Jalankan countdown setiap detik
-    setInterval(countdown, 1000);
-    countdown();
-  </script>
+    window.open(url, "_blank");
+  }
+</script> -->
