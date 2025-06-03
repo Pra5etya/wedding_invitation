@@ -100,13 +100,19 @@
     justify-content: center;
     align-items: center;
 
-    background: url('../assets/wayang/ramayana.png');
+    background: url('../assets/wayang/gunungan.png');
     background-repeat: no-repeat;
 
     background-position: center center;
     background-size: cover;
 
     background-attachment: scroll;
+}
+
+.galery_section {
+    align-items: center;
+
+    min-height: 100%;
 }
 
 .closing_section {
@@ -220,7 +226,7 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 /* ============================================= */

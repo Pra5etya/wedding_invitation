@@ -4,14 +4,8 @@
 /* Horizontal & Vertical*/
 @import url(layout.css);
 
-/* Frame */
-@import url(frame.css);
-
 /* Section Component */
 @import url(component.css);
 
 /* Fonts */
 @import url(fonts.css);
-
-/* Media Querry */
-@import url(media.css);

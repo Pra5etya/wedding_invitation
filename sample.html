@@ -1,215 +1,136 @@
-<!-- Counting -->
-<div class="counting_section">
-  <div class="counting_center">
-    <div class="counting_title">COUNTING THE DAYS</div>
-    <div class="countdown_display" id="countdown">
-      <div class="time_box">
-        <div class="time_number" id="days">0</div>
-        <div>Hari</div>
-      </div>
-      <div class="time_box">
-        <div class="time_number" id="hours">0</div>
-        <div>Jam</div>
-      </div>
-      <div class="time_box">
-        <div class="time_number" id="minutes">0</div>
-        <div>Menit</div>
-      </div>
-      <div class="time_box">
-        <div class="time_number" id="seconds">0</div>
-        <div>Detik</div>
-      </div>
-    </div>
-    <button class="calendar-btn" onclick="simpanKeKalender()">🗓️ ADD TO CALENDAR</button>
-  </div>
-</div>
-
-<script>
-  const weddingDate = new Date("2025-06-19T12:00:00+07:00").getTime();
-
-  function countdown() {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-
-    if (distance < 0) {
-      document.getElementById("countdown").innerHTML = "<p>🎉 Acara sudah dimulai! 🎉</p>";
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
-    document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
-    document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
-  }
-
-  setInterval(countdown, 1000);
-  countdown();
-
-  function simpanKeKalender() {
-    const title = encodeURIComponent("Undangan Raka & Nurul");
-    const location = encodeURIComponent("Museum Wayang Kekayon, Bantul");
-    const mapsLink = "https://maps.app.goo.gl/FGvqu6ANUmMzYw7P9";
-    const details = encodeURIComponent(
-      "Yuk datang ke acara pernikahan kami!\n📍 Lokasi: " + mapsLink + "\n\nSampai jumpa!"
-    );
-
-    const startDateUTC = "20250619T050000Z";
-    const endDateUTC = "20250619T070000Z";
-
-    const url = `https://www.google.com/calendar/render?action=TEMPLATE`
-              + `&text=${title}`
-              + `&dates=${startDateUTC}/${endDateUTC}`
-              + `&location=${location}`
-              + `&details=${details}`
-              + `&sf=true&output=xml`;
-
-    window.open(url, "_blank");
-  }
-</script>
-
-
-
-
-<!-- old counting -->
-<div class="counting_section">
-  <div class="counting_center">
-      <p class="counting_title">Hitung Hari</p>
-      <!-- <p class="counting_text">Pernikahan kami akan dilangsungkan pada:</p> -->
-      <!-- <p class="counting_date">19 Juni 2025, 12:00 WIB</p> -->
-
-      <p class="countdown_title">countdown</p>
-      <div id="countdown">Hitung Mundur...</div>
-
-      <!-- Tombol Simpan -->
-      <button class="calendar-btn" onclick="simpanKeKalender()">Simpan Tanggal</button>
-  </div>
-</div>
-
-
-<script>
-  <!-- const weddingDate = new Date("2025-06-19T00:00:00+07:00").getTime(); -->
-
-  function countdown() {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-
-    const countdownElement = document.getElementById("countdown");
-
-    if (distance < 0) {
-      countdownElement.innerHTML = "🎉 Acara sudah dimulai! 🎉";
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Fungsi untuk padding angka dengan 0 di depan jika < 10
-    const pad = (num) => num.toString().padStart(2, '0');
-
-    countdownElement.innerHTML = `
-      <div style="font-size: 1.5em; font-weight: bold; text-align: center; color: #2c3e50;">
-        <span>${days} Hari</span> 
-        <span>${pad(hours)} Jam</span> 
-        <span>${pad(minutes)} Menit</span> 
-        <span>${pad(seconds)} Detik</span>
-      </div>
-    `;
-  }
-
-  function simpanKeKalender() {
-      const title = encodeURIComponent("Undangan Raka & Nurul");
-
-      const location = encodeURIComponent("Museum Wayang Kekayon, Bantul");
-
-      const mapsLink = "https://maps.app.goo.gl/FGvqu6ANUmMzYw7P9"; // Ganti dengan link asli
-
-      const details = encodeURIComponent(
-      "Yuk datang ke acara pernikahan kami!\n" +
-      "📍 Lokasi: " + mapsLink + "\n\n" +
-      "Sampai jumpa!"
-      );
-
-      // Waktu UTC (WIB: +07:00 = UTC + 7 jam)
-      const startDateUTC = "20250619T050000Z"; // 12:00 WIB
-      const endDateUTC = "20250619T070000Z";   // 14:00 WIB
-
-      // Susun URL Google Calendar
-      const baseUrl = "https://www.google.com/calendar/render";
-      const url = `${baseUrl}?action=TEMPLATE`
-              + `&text=${title}`
-              + `&dates=${startDateUTC}/${endDateUTC}`
-              + `&location=${location}`
-              + `&details=${details}`
-              + `&sf=true&output=xml`;
-
-      window.open(url, "_blank");
-  }
-
-  // Jalankan countdown setiap detik
-  setInterval(countdown, 1000);
-  countdown();
-</script>
-
-
-
-
-
-
-<!-- Colapse Galery -->
-<!DOCTYPE html>
+<!-- COVER SAMPLE ANIMASI WAYANG -->
+<!-- =========================== -->
+ <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Galeri Foto</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Raka & Nurul</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
 
-    h2 {
-      text-align: center;
-      padding-top: 20px;
-    }
+        .cover_section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            min-height: 100vh;
+            background-image: url('your-frame-image.jpg'); /* Ganti dengan path sebenarnya */
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
 
-    .gallery-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px;
-      max-width: 600px;
-      margin: auto;
-    }
+        .cover_top img {
+            width: 50%;
+            align-self: center;
+            margin: 0.5rem auto;
+            display: block;
+        }
 
-    .gallery-container img {
-      flex: 0 1 calc(50% - 10px); /* Maksimal 2 gambar per baris */
-      box-sizing: border-box;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      object-fit: cover;
-      width: 100%;
-    }
-  </style>
+        .content_invite, .content_name {
+            text-align: center;
+        }
+
+        .content_invite {
+            font-size: 1.5rem;
+        }
+
+        .content_name {
+            font-size: 2.5rem;
+        }
+
+        .content_guest {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .cover_center {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .content_left, .content_right {
+            width: 40%;
+        }
+
+        .content_left img {
+            width: 100%;
+            height: auto;
+            transform: scaleX(-1);
+            animation: goyang-wayang 2s ease-in-out infinite;
+        }
+
+        .content_right img {
+            width: 100%;
+            height: auto;
+            animation: goyang-wayang-kanan 2s ease-in-out infinite;
+        }
+
+        .cover_bottom {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .cover_button {
+            font-size: 1.5rem;
+            color: whitesmoke;
+            background-color: black;
+            border: 2px solid #6e340a;
+            border-radius: 1rem;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cover_button:hover {
+            background-color: #232323;
+        }
+
+        /* Animasi Wayang */
+        @keyframes goyang-wayang {
+            0% { transform: translateX(0) scaleX(-1); }
+            50% { transform: translateX(-5px) scaleX(-1); }
+            100% { transform: translateX(0) scaleX(-1); }
+        }
+
+        @keyframes goyang-wayang-kanan {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
 </head>
 <body>
-  <h2>Galeri Foto Prewedding</h2>
-  <div class="gallery-container">
-    <img src="img1.jpg" alt="Foto 1">
-    <img src="img2.jpg" alt="Foto 2">
-    <img src="img3.jpg" alt="Foto 3">
-    <img src="img4.jpg" alt="Foto 4">
-    <img src="img5.jpg" alt="Foto 5">
-    <img src="img6.jpg" alt="Foto 6">
-    <img src="img7.jpg" alt="Foto 7">
-  </div>
+
+    <div class="cover_section">
+        <div class="cover_top">
+            <img src="assets/inisial.png" alt="Inisial">
+            <p class="content_invite">Wedding Invitation</p>
+            <p class="content_name">Raka & Nurul</p>
+            <div class="content_guest">
+                <p>Kepada Yth:</p>
+                <p><strong>Tamu Undangan</strong></p>
+            </div>
+        </div>
+
+        <div class="cover_center">
+            <div class="content_left">
+                <img src="assets/wayang/rama.png" alt="Wayang Rama">
+            </div>
+            <div class="content_right">
+                <img src="assets/wayang/sinta.png" alt="Wayang Sinta">
+            </div>
+        </div>
+
+        <div class="cover_bottom">
+            <button class="cover_button" id="play-button">Buka Undangan</button>
+        </div>
+    </div>
+
 </body>
 </html>

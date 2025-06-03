@@ -2,20 +2,22 @@
 @font-face {
     font-family: 'font_libre_regular';
     src: url('../fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* playfair display */
 @font-face {
     font-family: 'font_playfair_regular';
     src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* Text Nama Lengkap CP */
 .font_libre {
-    font-family: 'font_libre_regular';
+    font-family: 'font_libre_regular', serif;
 }
 
 /* Text Dekstipsi */
 .font_playfair {
-    font-family: 'font_playfair_regular';
+    font-family: 'font_playfair_regular', serif;
 }
