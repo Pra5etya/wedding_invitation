@@ -55,8 +55,20 @@ function handleInvitation() {
   smoothScrollToElement('opening_section', 2000);
 
   // Play Music
-  playMusic()
+  playMusic();
+
+  // Tambahkan class animate setelah memastikan DOM sudah reflow
+  const openingSection = document.getElementById('opening_section');
+  if (openingSection) {
+    // Trigger reflow
+    void openingSection.offsetWidth;
+    
+    setTimeout(() => {
+      openingSection.classList.add('animate');
+    }, 100); // jeda kecil agar animasi dimulai ulang
+  }
 }
+
 
 export function initCover() {
   document.addEventListener('DOMContentLoaded', () => {
@@ -64,9 +76,7 @@ export function initCover() {
 
     if (tombol) {
       tombol.addEventListener('click', handleInvitation);  
-    } 
-    
-    else {
+    } else {
       console.warn('Elemen #play-button tidak ditemukan.');
     }
   });

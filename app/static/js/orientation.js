@@ -14,6 +14,19 @@ export function checkOrientation() {
 
 export function initOrientationCheck() {
   window.addEventListener("resize", checkOrientation);
-  window.addEventListener("orientationchange", checkOrientation);
+
+  window.addEventListener("orientationchange", () => {
+    const runtime = (typeof browser !== 'undefined' && browser.runtime) ? browser.runtime
+                 : (typeof chrome !== 'undefined' && chrome.runtime) ? chrome.runtime
+                 : null;
+
+    if (runtime && typeof runtime.sendMessage === 'function') {
+      runtime.sendMessage({ event: 'orientation_changed' });
+    
+    } else {
+      console.warn('Orientation Changed');
+    }
+  });
+
   window.addEventListener("load", checkOrientation);
 }

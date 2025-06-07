@@ -51,7 +51,7 @@
     flex-direction: column;
     flex-wrap: wrap;
 
-    min-height: 100vh;
+    min-height: 100svh;
 }
 
 .cover_section {
@@ -71,7 +71,7 @@
 .cp_section {
     justify-content: space-around;
 
-    background-image: url('../assets/frame/frame_cp.png');
+    /* background-image: url('../assets/frame/frame_cp.png'); */
     background-size: 100% 100%;
 
     background-repeat: no-repeat;
@@ -85,7 +85,7 @@
 
     justify-content: flex-start;
     
-    background-image: url('../assets/frame/frame_agenda.png');
+    /* background-image: url('../assets/frame/frame_agenda.png'); */
     background-size: 100% 100%;
 
     background-repeat: no-repeat;
@@ -95,7 +95,7 @@
 }
 
 .counting_section {
-    min-height: 100vh;
+    min-height: 70vh;
 
     justify-content: center;
     align-items: center;
@@ -104,7 +104,7 @@
     background-repeat: no-repeat;
 
     background-position: center center;
-    background-size: cover;
+    background-size: 90% auto;
 
     background-attachment: scroll;
 }
@@ -112,7 +112,7 @@
 .galery_section {
     align-items: center;
 
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .closing_section {
@@ -178,7 +178,7 @@
     flex-direction: column;
     justify-content: space-evenly;
 
-    height: 100vh;
+    height: 100%;
 
     padding: 1rem;
 }
@@ -210,7 +210,8 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    padding: 2rem;
+    margin: 1rem;
+    padding: 1rem;
 
     background: rgba(0, 0, 0, 0.7); /* semi-transparent background */
     

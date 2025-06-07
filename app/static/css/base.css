@@ -7,9 +7,9 @@
   font-family: 'font_playfair_regular';
 }
 
-/* body.lock-scroll {
+body.lock-scroll {
   overflow: hidden;
-} */
+}
 
 html, body {
   margin: 0;
@@ -27,11 +27,11 @@ html, body {
   background-color: black;
 
   background-image: url('../assets/bg_vintage.png');
-
-  background-size: cover;
+  background-size: auto;
+  
   background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: local;
+  background-attachment: scroll;
 }
 
 audio {
