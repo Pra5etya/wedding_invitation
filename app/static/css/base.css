@@ -27,11 +27,11 @@ html, body {
   background-color: black;
 
   background-image: url('../assets/bg_vintage.png');
-  background-size: cover;
+  background-size: 100% 100%;
   
   background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 audio {
