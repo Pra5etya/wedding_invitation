@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, send_from_directory, request, abort
+from flask import Blueprint, render_template, send_from_directory, request, abort, session, make_response, send_file
 import os
 
 main_bp = Blueprint('main', __name__)
@@ -9,11 +9,13 @@ ALLOWED_AUDIO_EXTENSIONS = {'.mp3', '.wav', '.ogg'}
 
 # Daftar Referer yang dipercaya
 TRUSTED_REFERERS = [
-    'https://invitation-raka-nurul.com',  # spesifik HTTPS
-    'http://localhost',
-    'http://127.0.0.1',
-    'http://192.168.',  # jaringan lokal
+    'localhost',
+    '127.0.0.1',
+    '192.168.',                     # support jaringan lokal (prefix IP)
+    'invitation-raka-nurul.com'
 ]
+
+SECRET_SESSION_KEY = 'user_authenticated'
 
 
 # 🔒 Fungsi: Validasi Referer
@@ -30,6 +32,21 @@ def is_allowed_file(filename, allowed_extensions):
 # 🔒 Fungsi: Validasi path aman
 def is_safe_path(filename):
     return '..' not in filename and not filename.startswith('/')
+
+def is_authenticated():
+    return session.get(SECRET_SESSION_KEY, False)
+
+
+# --- Security Header Injection ---
+def secure_headers(response):
+    response.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+    response.headers['Cache-Control'] = 'no-store'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'DENY'
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    return response
+
 
 
 
