@@ -6,13 +6,13 @@
     <div class="galery_center fade-scroll">
       <div class="carousel-container">
         <div class="carousel-images" id="carouselImages">
-          <img src="{{ url_for('static', filename='assets/galery/carousel/p_1.jpg') }}" loading="eager">
-          <img src="{{ url_for('static', filename='assets/galery/carousel/pm_1.jpg') }}" loading="eager">
-          <img src="{{ url_for('static', filename='assets/galery/carousel/tm_1.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/p_1.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/pm_1.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/tm_1.jpg') }}" loading="eager">
 
-          <img src="{{ url_for('static', filename='assets/galery/carousel/dm_2.jpg') }}" loading="eager">
-          <img src="{{ url_for('static', filename='assets/galery/carousel/gu_2.jpg') }}" loading="eager">
-          <img src="{{ url_for('static', filename='assets/galery/carousel/tdm_2.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/dm_2.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/gu_2.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/tdm_2.jpg') }}" loading="eager">
         </div>
 
         <button class="carousel-button prev">❮</button>
@@ -24,18 +24,18 @@
     <!-- Grid Gallery Section -->    
     <div class="gallery-container">
       <div class="fade-scroll gallery_intersection">
-        <img src="{{ url_for('static', filename='assets/galery/collections/dm_4.jpg') }}" loading="lazy">
-        <img src="{{ url_for('static', filename='assets/galery/collections/p_4.jpg') }}" loading="lazy">
+        <img src="{{ url_for('main.protected_image', filename='galery/collections/dm_4.jpg') }}" loading="lazy">
+        <img src="{{ url_for('main.protected_image', filename='galery/collections/p_4.jpg') }}" loading="lazy">
       </div>
 
       <div class="fade-scroll gallery_intersection">
-        <img src="{{ url_for('static', filename='assets/galery/collections/gu_1.jpg') }}" loading="lazy">
-        <img src="{{ url_for('static', filename='assets/galery/collections/tm_2.jpg') }}" loading="lazy">
+        <img src="{{ url_for('main.protected_image', filename='galery/collections/gu_1.jpg') }}" loading="lazy">
+        <img src="{{ url_for('main.protected_image', filename='galery/collections/tm_2.jpg') }}" loading="lazy">
       </div>
 
       <div class="fade-scroll gallery_intersection">
-        <img src="{{ url_for('static', filename='assets/galery/collections/pm_5.jpg') }}" loading="lazy">
-        <img src="{{ url_for('static', filename='assets/galery/collections/tdm_1.jpg') }}" loading="lazy">
+        <img src="{{ url_for('main.protected_image', filename='galery/collections/pm_5.jpg') }}" loading="lazy">
+        <img src="{{ url_for('main.protected_image', filename='galery/collections/tdm_1.jpg') }}" loading="lazy">
       </div>
     </div>
   

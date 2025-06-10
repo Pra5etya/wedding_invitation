@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Undangan Raka & Nurul{% endblock %}
+{% block title %}Invitation Raka & Nurul{% endblock %}
 
 {% block content %}
     {% include "index/cover.html" %}
@@ -19,5 +19,5 @@
     
     {% include "index/closing.html" %}
 
-    <audio id="lagu" src="{{ url_for('static', filename='audio/kebo_giro.mp3') }}" preload="auto"></audio>
+    <audio id="lagu" src="{{ url_for('main.protected_audio', filename='kebo_giro.mp3') }}" preload="auto"></audio>
 {% endblock %}

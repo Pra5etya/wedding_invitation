@@ -26,7 +26,7 @@ html, body {
 
   background-color: black;
 
-  background-image: url('../assets/bg_vintage.png');
+  background-image: url('/assets/bg_vintage.png');
   background-size: 100% 100%;
   
   background-position: top center;

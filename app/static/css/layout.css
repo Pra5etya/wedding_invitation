@@ -57,7 +57,7 @@
 .cover_section {
     justify-content: space-around;
 
-    background-image: url('../assets/frame/frame_cover.png');
+    /* background-image: url('../assets/frame/frame_cover.png'); */
     background-size: 100% 100%;
 
     background-repeat: no-repeat;
@@ -102,7 +102,7 @@
     justify-content: center;
     align-items: center;
 
-    background: url('../assets/wayang/gunungan.png');
+    /* background: url('../assets/wayang/gunungan.png'); */
     background-repeat: no-repeat;
 
     background-position: center center;

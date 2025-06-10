@@ -1,6 +1,6 @@
-<div class="cover_section">
+<div class="cover_section lazy-bg" data-bg="{{ url_for('main.protected_image', filename='frame/frame_cover.png') }}">
     <div class="cover_top">
-        <img src="{{ url_for('static', filename = 'assets/inisial.png') }}">
+        <img src="{{ url_for('main.protected_image', filename='inisial.png') }}">
         <p class="content_invite">Wedding Invitation</p>
         <p class="content_name">Raka & Nurul</p>
 
@@ -12,11 +12,12 @@
 
     <div class="cover_center">
         <div class="content_left">
-            <img src="{{ url_for('static', filename = 'assets/wayang/rama.png') }}" loading="eager">
+            <img src="{{ url_for('main.protected_image', filename='wayang/rama.png') }}" loading="eager">
+
         </div>
         
         <div class="content_right">
-            <img src="{{ url_for('static', filename = 'assets/wayang/sinta.png') }}" loading="eager">
+            <img src="{{ url_for('main.protected_image', filename='wayang/sinta.png') }}" loading="eager">
         </div>
     </div>
 
@@ -24,4 +25,3 @@
         <button class="cover_button" id="play-button">Buka Undangan</button>
     </div>
 </div>
-

@@ -1,7 +1,7 @@
-<div class="agenda_section fade-scroll lazy-bg" data-bg="{{ url_for('static', filename='assets/frame/frame_agenda.png') }}">
+<div class="agenda_section fade-scroll lazy-bg" data-bg="{{ url_for('main.protected_image', filename='frame/frame_agenda.png') }}">
     <div class="agenda_center">
         <div class="agenda_canvas fade-scroll">
-            <img src="{{ url_for('static', filename = 'assets/icon/akad_2.svg') }}" loading="lazy">
+            <img src="{{ url_for('main.protected_image', filename = 'icon/akad_2.svg') }}" loading="lazy">
         </div>
         
         <p class="agenda_head fade-scroll">Resepsi</p>
@@ -21,7 +21,7 @@
         <button type="button" 
             class="agenda_button fade-scroll" 
             onclick="location.href='https://maps.app.goo.gl/ytaqNE2URaVRihzq5'">
-                <img src = "{{ url_for('static', filename = 'assets/icon/maps.svg') }}" loading="lazy">
+                <img src = "{{ url_for('main.protected_image', filename = 'icon/maps.svg') }}" loading="lazy">
                 Lihat Lokasi
         </button>
     </div>

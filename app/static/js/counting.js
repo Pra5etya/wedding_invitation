@@ -1,4 +1,3 @@
-// counting.js
 const weddingDate = new Date("2025-06-19T00:00:00+07:00").getTime();
 
 function countdown() {
