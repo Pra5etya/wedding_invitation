@@ -131,6 +131,9 @@
 
     border: 2px solid #6e340a; 
     transition: all 1s ease;
+
+    cursor: pointer;
+    touch-action: manipulation; /* mencegah delay di Safari */
 }
 
 .cover_button:hover {

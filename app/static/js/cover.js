@@ -75,7 +75,14 @@ export function initCover() {
     const tombol = document.getElementById('play-button');
 
     if (tombol) {
-      tombol.addEventListener('click', handleInvitation);  
+      // Desktop & Android
+      tombol.addEventListener('click', handleInvitation);
+
+      // iOS Safari fix
+      tombol.addEventListener('touchend', function(e) {
+        e.preventDefault(); // mencegah event ganda
+        handleInvitation();
+      });
     } else {
       console.warn('Elemen #play-button tidak ditemukan.');
     }
