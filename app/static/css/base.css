@@ -12,11 +12,8 @@ body.lock-scroll {
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100dvw;
+  min-height: 100dvh;
 
   display: flex;
   flex-direction: column;
@@ -31,7 +28,7 @@ html, body {
   
   background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 audio {

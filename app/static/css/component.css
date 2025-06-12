@@ -449,7 +449,7 @@
 .gallery_title {
     font-size: 2.5rem;
 
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 
     text-align: center;
@@ -505,7 +505,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding: 1.5rem 0;
+    padding: 0;
     max-width: 37.5rem;
     margin: 1rem auto;
 }
@@ -519,10 +519,6 @@
     cursor: pointer;
     transition: transform 0.3s;
 }
-
-/* .gallery-container img:hover {
-    transform: scale(2);
-} */
 
 .gallery_intersection {
     display: flex;

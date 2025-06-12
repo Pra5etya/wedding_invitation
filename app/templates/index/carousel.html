@@ -1,0 +1,31 @@
+<div class="galery_section">
+  <div class="galery_center">
+    <p class="gallery_title fade-scroll">Wedding Gallery</p>
+
+    <!-- Carousel Section -->
+    <div class="galery_center fade-scroll">
+      <div class="carousel-container">
+        <div class="carousel-images" id="carouselImages">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/p_1.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/pm_1.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/tm_1.jpg') }}" loading="eager">
+
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/dm_2.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/gu_2.jpg') }}" loading="eager">
+          <img src="{{ url_for('main.protected_image', filename='galery/carousel/tdm_2.jpg') }}" loading="eager">
+        </div>
+
+        <button class="carousel-button prev">❮</button>
+        <button class="carousel-button next">❯</button>
+      
+      </div>
+    </div>
+
+  </div>
+
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+</div>
