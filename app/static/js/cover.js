@@ -3,7 +3,9 @@ let hasInteracted = false;
 // Unlock SCroll
 function unlockScroll() {
   document.body.classList.remove('lock-scroll');
+  console.log('Scroll unlocked.'); // Tambahan log
 }
+
 
 // Smooth Scrolling
 function smoothScrollToElement(targetId, duration) {
@@ -73,16 +75,18 @@ function handleInvitation() {
 export function initCover() {
   document.addEventListener('DOMContentLoaded', () => {
     const tombol = document.getElementById('play-button');
+    console.log('initCover fired, tombol:', tombol);
 
     if (tombol) {
-      // Desktop & Android
-      tombol.addEventListener('click', handleInvitation);
-
-      // iOS Safari fix
-      tombol.addEventListener('touchend', function(e) {
-        e.preventDefault(); // mencegah event ganda
+      tombol.addEventListener('click', e => {
+        console.log('click event fired');
         handleInvitation();
       });
+      tombol.addEventListener('touchend', e => {
+        console.log('touchend (non-passive) fired');
+        e.preventDefault();
+        handleInvitation();
+      }, { passive: false });
     } else {
       console.warn('Elemen #play-button tidak ditemukan.');
     }

@@ -57,6 +57,8 @@
 .cover_section {
     justify-content: space-around;
 
+    pointer-events: auto;
+
     /* background-image: url('../assets/frame/frame_cover.png'); */
     background-size: 100% 100%;
 

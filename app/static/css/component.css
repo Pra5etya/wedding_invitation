@@ -132,6 +132,7 @@
     border: 2px solid #6e340a; 
     transition: all 1s ease;
 
+    pointer-events: auto;
     cursor: pointer;
     touch-action: manipulation; /* mencegah delay di Safari */
 }
