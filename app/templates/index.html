@@ -21,4 +21,8 @@
     {% include "index/closing.html" %}
 
     <audio id="lagu" src="{{ url_for('main.protected_audio', filename='kebo_giro.mp3') }}" preload="auto"></audio>
+    
+    <!-- Important For matching browser -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> 
+
 {% endblock %}

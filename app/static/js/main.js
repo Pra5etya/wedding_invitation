@@ -1,5 +1,5 @@
 // Browser Scripts
-import './polyfill.js';
+// import './polyfill.js';
 
 // Web Scripts
 import { initOrientationCheck } from './orientation.js';
